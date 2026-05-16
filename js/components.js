@@ -12,9 +12,9 @@ function renderTopbar() {
   return `<div class="topbar">
   <div class="wrap">
     <div class="topbar-left">
-      <span>📍 Plateau, Abidjan — Côte d'Ivoire</span>
-      <span>☎ <a href="tel:+2250709979697">+225 07 09 97 96 97</a></span>
-      <span>✉ <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a></span>
+      <span>📍 Brisbane, Australie</span>
+      <span>☎ <a href="tel:+61 485 976 4090">+61 485 976 4090</a></span>
+      <span>✉ <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a></span>
     </div>
     <div class="topbar-right">Lun–Ven : 08h–18h &nbsp;|&nbsp; Urgences 24/7</div>
   </div>
@@ -29,7 +29,6 @@ function renderNav(activePage) {
       ${ECURSSON_SVG}
       <div class="nav-logo-text">
         <span class="brand">World Global Security</span>
-        <span class="sub">Étude Notariale — Maître Gnagne Junior</span>
       </div>
     </a>
     <ul class="nav-menu">
@@ -109,7 +108,7 @@ function renderDevis() {
         </div>
         <p>Nous vous invitons à prendre contact avec nous afin d'obtenir une estimation gratuite des coûts pour un projet ou un service spécifique. Nous sommes ouverts à fournir des informations supplémentaires et à répondre à toutes les questions avant de formaliser une offre payante.</p>
         <p>Appelez pour en savoir plus</p>
-        <div class="devis-phone"><a href="tel:+2250709979697">+225 07 09 97 96 97</a></div>
+        <div class="devis-phone"><a href="tel:+61 485 976 4090">+61 485 976 4090</a></div>
       </div>
       <div class="devis-right">
         <form onsubmit="submitDevis(event)">
@@ -137,7 +136,7 @@ function renderDevis() {
 // ── TEAM SECTION (shared) ──
 function renderTeam() {
   const members = [
-    {img:'team-4',name:'Gnagne Junior',role:'Notaire — Directeur'},
+    {img:'team-4',name:'John Anderson',role:'C.E.O'},
     {img:'team-2',name:'Sarah Mitchell',role:'Responsable Gestion des Biens'},
     {img:'team-3',name:'Benjamin Harris',role:'Respo. Transport'},
     {img:'team-1',name:'James Taylor',role:'Supervise la surveillance'},
@@ -230,7 +229,7 @@ function renderFooter() {
           <div class="sub">Étude Notariale</div>
         </div>
       </div>
-      <p>Étude notariale de référence à Abidjan, Côte d'Ivoire. Sous la direction de Maître Gnagne Junior, notaire assermenté.</p>
+      <p>Étude notariale de référence à Abidjan, Côte d'Ivoire. Sous la direction de Maître John Anderson, notaire assermenté.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
@@ -258,8 +257,8 @@ function renderFooter() {
       <address>
         Plateau, Abidjan<br>
         Côte d'Ivoire<br><br>
-        Tél : <a href="tel:+2250709979697">+225 07 09 97 96 97</a><br>
-        E-mail : <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a><br><br>
+        Tél : <a href="tel:+61 485 976 4090">+61 485 976 4090</a><br>
+        E-mail : <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a><br><br>
         Lun–Ven : 08h–18h<br>
         Sam : 09h–13h
       </address>
