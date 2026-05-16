@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Global Security — Étude Notariale | Maître Gnagne Junior | Abidjan</title>
+<meta name="description" content="Étude notariale World Global Security — Maître Gnagne Junior, Notaire à Abidjan, Côte d'Ivoire. Immobilier, successions, sociétés, mariages, authentification d'actes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   RESET & ROOT VARIABLES
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Dark palette */
+  --navy:       #00001e;
+  --deep:       #000814;
+  --midnight:   #000d2e;
+  --blue-dark:  #001847;
+  --blue-mid:   #0a2a6e;
+  --blue-accent:#1a4db0;
+
+  /* Light palette */
+  --cream:      #f8f6f1;
+  --cream-dark: #ede9e0;
+  --parchment:  #f2ede3;
+  --white:      #ffffff;
+  --light-blue: #eef2fa;
+  --light-blue2:#e4ecf7;
+
+  /* Gold */
+  --gold:       #c8a96e;
+  --gold-dark:  #a8843e;
+  --gold-light: #e8d5a8;
+
+  /* Text */
+  --text-dark:  #0d1b2a;
+  --text-mid:   #2d3e50;
+  --text-light: #6b7c8d;
+  --text-white: #f4f2ee;
+  --offwhite:   #ddd8ce;
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', 'Baskerville', 'Book Antiqua', Georgia, serif;
+  --font-deco:  'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Futura', 'Century Gothic', 'Gill Sans', 'Trebuchet MS', sans-serif;
+
+  --transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --shadow-sm:  0 2px 20px rgba(0,8,20,0.08);
+  --shadow-md:  0 8px 48px rgba(0,8,20,0.12);
+  --shadow-lg:  0 20px 80px rgba(0,8,20,0.18);
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--white);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+img { max-width: 100%; }
+
+/* ═══════════════════════════════════════════════
+   CURSOR CUSTOM
+═══════════════════════════════════════════════ */
+.cursor {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed; pointer-events: none; z-index: 10000;
+  transform: translate(-50%,-50%);
+  transition: transform 0.1s ease, width 0.2s, height 0.2s;
+}
+.cursor-ring {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(200,169,110,0.5);
+  border-radius: 50%;
+  position: fixed; pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+/* ═══════════════════════════════════════════════
+   TOP INFO BAR
+═══════════════════════════════════════════════ */
+.topbar {
+  background: var(--navy);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(200,169,110,0.2);
+}
+.topbar-inner {
+  max-width: 1320px; margin: 0 auto; padding: 0 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.topbar-left {
+  display: flex; gap: 32px; align-items: center;
+}
+.topbar-item {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.12em; color: var(--offwhite);
+}
+.topbar-item span.icon { color: var(--gold); font-size: 12px; }
+.topbar-item a { color: var(--offwhite); text-decoration: none; transition: color var(--transition); }
+.topbar-item a:hover { color: var(--gold); }
+
+.topbar-right {
+  display: flex; gap: 16px; align-items: center;
+}
+.topbar-badge {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); border: 1px solid rgba(200,169,110,0.3);
+  padding: 3px 10px;
+}
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 900;
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,8,20,0.08);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+nav.dark-nav {
+  background: rgba(0,8,20,0.97);
+  border-bottom-color: rgba(200,169,110,0.15);
+}
+
+.nav-inner {
+  max-width: 1320px; margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 80px;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none; flex-shrink: 0;
+}
+.nav-logo-shield {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-shield svg { width: 44px; height: 44px; }
+
+.nav-brand-block { display: flex; flex-direction: column; line-height: 1.15; }
+.nav-brand-top {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+}
+.nav-brand-main {
+  font-family: var(--font-serif);
+  font-size: 18px; font-weight: 500; letter-spacing: 0.08em;
+  color: var(--text-dark);
+}
+.nav-brand-sub {
+  font-family: var(--font-sans);
+  font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--text-light);
+}
+nav.dark-nav .nav-brand-main { color: var(--text-white); }
+nav.dark-nav .nav-brand-sub { color: var(--offwhite); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 8px;
+  list-style: none;
+}
+.nav-links > li { position: relative; }
+.nav-links > li > a {
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-mid); text-decoration: none;
+  padding: 8px 14px; display: block;
+  transition: color var(--transition);
+  position: relative;
+}
+.nav-links > li > a::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 14px; right: 14px; height: 1px;
+  background: var(--gold); transform: scaleX(0);
+  transition: transform var(--transition);
+}
+.nav-links > li > a:hover { color: var(--gold-dark); }
+.nav-links > li > a:hover::after { transform: scaleX(1); }
+nav.dark-nav .nav-links > li > a { color: var(--offwhite); }
+nav.dark-nav .nav-links > li > a:hover { color: var(--gold); }
+
+/* Dropdown */
+.has-dropdown { position: relative; }
+.has-dropdown > a::before {
+  content: '▾'; margin-left: 4px; font-size: 8px;
+}
+.dropdown {
+  position: absolute; top: 100%; left: 0;
+  background: var(--white);
+  border: 1px solid rgba(0,8,20,0.08);
+  border-top: 2px solid var(--gold);
+  min-width: 240px;
+  box-shadow: var(--shadow-md);
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 100;
+}
+.has-dropdown:hover .dropdown {
+  opacity: 1; pointer-events: all; transform: translateY(0);
+}
+.dropdown a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 20px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-mid); text-decoration: none;
+  border-bottom: 1px solid rgba(0,8,20,0.05);
+  transition: background var(--transition), color var(--transition), padding-left var(--transition);
+}
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover {
+  background: var(--light-blue);
+  color: var(--blue-dark);
+  padding-left: 28px;
+}
+.dropdown a .d-icon { color: var(--gold); font-size: 13px; }
+
+.nav-cta {
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  background: var(--navy); color: var(--white) !important;
+  padding: 12px 24px !important;
+  text-decoration: none;
+  transition: background var(--transition) !important;
+  border: none; cursor: pointer;
+}
+.nav-cta:hover { background: var(--gold-dark) !important; color: var(--white) !important; }
+.nav-cta::after { display: none !important; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 8px; background: none; border: none;
+}
+.hamburger span { display: block; width: 24px; height: 1.5px; background: var(--text-dark); transition: var(--transition); }
+nav.dark-nav .hamburger span { background: var(--white); }
+
+/* Mobile menu */
+.mobile-nav {
+  position: fixed; inset: 0; z-index: 800;
+  background: var(--navy);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 28px;
+  opacity: 0; pointer-events: none;
+  transition: opacity var(--transition);
+}
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav a {
+  font-family: var(--font-serif);
+  font-size: 28px; font-weight: 300; color: var(--text-white);
+  text-decoration: none; letter-spacing: 0.05em;
+  transition: color var(--transition);
+}
+.mobile-nav a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute; top: 24px; right: 32px;
+  font-size: 28px; color: var(--gold);
+  cursor: pointer; background: none; border: none;
+}
+
+/* ═══════════════════════════════════════════════
+   SHARED UTILITIES
+═══════════════════════════════════════════════ */
+.container { max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+.container-sm { max-width: 960px; margin: 0 auto; padding: 0 48px; }
+
+.section-eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 18px;
+}
+.section-eyebrow::before {
+  content: ''; display: block;
+  width: 32px; height: 1px; background: var(--gold);
+}
+
+.section-title-dark {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 400; line-height: 1.08;
+  color: var(--text-dark);
+}
+.section-title-dark em { font-style: italic; color: var(--blue-dark); }
+
+.section-title-light {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 400; line-height: 1.08;
+  color: var(--white);
+}
+.section-title-light em { font-style: italic; color: var(--gold-light); }
+
+.section-body-dark {
+  font-family: var(--font-sans);
+  font-size: 13px; line-height: 2.1; color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+.section-body-light {
+  font-family: var(--font-sans);
+  font-size: 13px; line-height: 2.1; color: var(--offwhite);
+  letter-spacing: 0.03em;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.12s; }
+.reveal-d2 { transition-delay: 0.24s; }
+.reveal-d3 { transition-delay: 0.36s; }
+.reveal-d4 { transition-delay: 0.48s; }
+
+/* Gold divider */
+.gold-rule {
+  display: flex; align-items: center; gap: 16px;
+  margin: 24px 0;
+}
+.gold-rule::before, .gold-rule::after {
+  content: ''; flex: 1; height: 1px; background: var(--gold);
+  opacity: 0.3;
+}
+.gold-rule span {
+  font-size: 10px; color: var(--gold); letter-spacing: 0.3em;
+}
+
+/* Buttons */
+.btn-navy {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  background: var(--navy); color: var(--white);
+  padding: 16px 36px; text-decoration: none; border: none; cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  position: relative; overflow: hidden;
+}
+.btn-navy::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--blue-accent);
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+.btn-navy span, .btn-navy svg { position: relative; z-index: 1; }
+.btn-navy:hover::before { transform: translateX(0); }
+.btn-navy:hover { transform: translateY(-2px); }
+
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  background: var(--gold); color: var(--deep);
+  padding: 16px 36px; text-decoration: none; border: none; cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+.btn-outline-white {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  background: transparent; color: var(--white);
+  padding: 15px 36px; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: border-color var(--transition), background var(--transition);
+}
+.btn-outline-white:hover {
+  border-color: var(--gold); background: rgba(200,169,110,0.1); color: var(--gold-light);
+}
+
+.btn-outline-navy {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  background: transparent; color: var(--navy);
+  padding: 15px 36px; text-decoration: none;
+  border: 1px solid rgba(0,8,20,0.25);
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+.btn-outline-navy:hover {
+  border-color: var(--navy); background: var(--navy); color: var(--white);
+}
+
+/* ═══════════════════════════════════════════════
+   HERO — DARK WITH DIAGONAL
+═══════════════════════════════════════════════ */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-bg-grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.hero-bg-glow {
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 800px; height: 800px;
+  background: radial-gradient(ellipse, rgba(26,77,176,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-bg-glow2 {
+  position: absolute;
+  bottom: -30%; left: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse, rgba(200,169,110,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-main {
+  flex: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1320px; margin: 0 auto; padding: 0 48px;
+  width: 100%; padding-top: 60px; padding-bottom: 60px;
+  position: relative; z-index: 2;
+  gap: 80px;
+}
+
+/* Left text */
+.hero-left { max-width: 620px; }
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 16px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px;
+  opacity: 0; animation: slideUp 0.8s 0.4s ease forwards;
+}
+.hero-eyebrow::before {
+  content: ''; width: 36px; height: 1px; background: var(--gold);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 5.5vw, 82px);
+  font-weight: 400; line-height: 1.0;
+  color: var(--white); margin-bottom: 8px;
+  opacity: 0; animation: slideUp 0.9s 0.6s ease forwards;
+}
+.hero-title em {
+  font-style: italic; color: var(--gold-light); display: block;
+}
+.hero-title strong {
+  font-weight: 500; display: block;
+}
+
+.hero-notary-name {
+  font-family: var(--font-sans);
+  font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px;
+  opacity: 0; animation: slideUp 0.9s 0.75s ease forwards;
+  padding: 10px 0; border-top: 1px solid rgba(200,169,110,0.2);
+  border-bottom: 1px solid rgba(200,169,110,0.2);
+  display: inline-block;
+}
+
+.hero-desc {
+  font-family: var(--font-sans);
+  font-size: 13px; line-height: 2.1; color: var(--offwhite);
+  letter-spacing: 0.03em; max-width: 480px; margin-bottom: 44px;
+  opacity: 0; animation: slideUp 0.9s 0.9s ease forwards;
+}
+
+.hero-actions {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.9s 1.1s ease forwards;
+}
+
+/* Right visual */
+.hero-right {
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+  opacity: 0; animation: fadeIn 1.2s 0.8s ease forwards;
+}
+
+.hero-shield-wrap {
+  position: relative; width: 420px; height: 420px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.hero-rings {
+  position: absolute; inset: 0;
+  animation: rotateSlow 20s linear infinite;
+}
+.hero-rings-r {
+  position: absolute; inset: 0;
+  animation: rotateSlow 14s linear infinite reverse;
+}
+
+.hero-shield-main {
+  width: 240px; position: relative; z-index: 2;
+  filter: drop-shadow(0 0 40px rgba(200,169,110,0.25));
+  animation: float 7s ease-in-out infinite;
+}
+
+.hero-info-cards {
+  position: absolute; right: -30px;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.hero-info-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,169,110,0.15);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px; min-width: 170px;
+}
+.hero-info-num {
+  font-family: var(--font-serif);
+  font-size: 30px; font-weight: 300; color: var(--gold); line-height: 1;
+}
+.hero-info-label {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--offwhite); opacity: 0.7; margin-top: 4px;
+}
+
+/* Hero bottom bar */
+.hero-bottom {
+  position: relative; z-index: 2;
+  background: var(--white);
+  border-top: 3px solid var(--gold);
+}
+.hero-bottom-inner {
+  max-width: 1320px; margin: 0 auto; padding: 0 48px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.hero-stat {
+  padding: 28px 24px;
+  border-right: 1px solid rgba(0,8,20,0.08);
+  display: flex; align-items: center; gap: 16px;
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--light-blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.hero-stat-text {}
+.hero-stat-val {
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 500; color: var(--text-dark); line-height: 1;
+}
+.hero-stat-lbl {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-light); margin-top: 3px;
+}
+
+/* ═══════════════════════════════════════════════
+   MARQUEE STRIP
+═══════════════════════════════════════════════ */
+.marquee-strip {
+  background: var(--gold);
+  padding: 13px 0; overflow: hidden;
+}
+.marquee-inner {
+  display: flex; white-space: nowrap;
+  animation: marquee 35s linear infinite;
+}
+.marquee-item {
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--deep); padding: 0 36px;
+  display: flex; align-items: center; gap: 16px;
+}
+.marquee-item::before { content: '◆'; font-size: 6px; }
+
+/* ═══════════════════════════════════════════════
+   ABOUT — WHITE BG
+═══════════════════════════════════════════════ */
+#apropos {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: center;
+}
+
+.about-image-col { position: relative; }
+
+.about-frame {
+  position: relative;
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--navy) 100%);
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.about-frame::after {
+  content: '';
+  position: absolute;
+  top: 20px; right: -20px; bottom: -20px; left: 20px;
+  border: 1px solid rgba(200,169,110,0.25);
+  pointer-events: none; z-index: 2;
+}
+.about-frame-inner {
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+  opacity: 0.12;
+}
+.about-frame-inner svg { width: 160px; }
+
+.about-badge {
+  position: absolute; bottom: -28px; right: -28px; z-index: 3;
+  background: var(--gold);
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+}
+.about-badge-num {
+  font-family: var(--font-serif);
+  font-size: 38px; font-weight: 300; color: var(--deep); line-height: 1;
+}
+.about-badge-label {
+  font-family: var(--font-sans);
+  font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--deep); opacity: 0.7; margin-top: 4px; line-height: 1.4;
+}
+
+.about-text-col {}
+
+.about-text-col .section-title-dark { margin-bottom: 24px; }
+.about-text-col .section-body-dark { margin-bottom: 18px; }
+
+.about-pillars {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--cream-dark);
+  margin-top: 40px;
+}
+.about-pillar {
+  background: var(--white);
+  padding: 24px 22px;
+  transition: background var(--transition);
+}
+.about-pillar:hover { background: var(--light-blue); }
+.about-pillar-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+.about-pillar-title {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.about-pillar-desc {
+  font-family: var(--font-sans);
+  font-size: 11px; line-height: 1.8; color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════
+   SERVICES — CREAM BG
+═══════════════════════════════════════════════ */
+#services {
+  padding: 120px 0;
+  background: var(--cream);
+}
+
+.services-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: end;
+  margin-bottom: 64px;
+}
+
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; background: var(--cream-dark);
+}
+
+.service-card {
+  background: var(--white);
+  padding: 48px 36px;
+  position: relative; overflow: hidden;
+  transition: background var(--transition), transform var(--transition);
+  cursor: pointer;
+}
+.service-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform var(--transition);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover { background: var(--light-blue); transform: translateY(-3px); box-shadow: var(--shadow-md); z-index: 1; }
+
+.service-num {
+  font-family: var(--font-serif);
+  font-size: 56px; font-weight: 300; line-height: 1;
+  color: rgba(0,24,71,0.07);
+  margin-bottom: 16px;
+  transition: color var(--transition);
+}
+.service-card:hover .service-num { color: rgba(0,24,71,0.12); }
+
+.service-icon-wrap {
+  width: 52px; height: 52px;
+  background: var(--light-blue);
+  border: 1px solid rgba(26,77,176,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 22px;
+  transition: background var(--transition), border-color var(--transition);
+}
+.service-card:hover .service-icon-wrap {
+  background: var(--navy); border-color: var(--navy);
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 14px; line-height: 1.25;
+}
+
+.service-desc {
+  font-family: var(--font-sans);
+  font-size: 12px; line-height: 1.95; color: var(--text-light);
+  margin-bottom: 28px;
+}
+
+.service-bullets {
+  list-style: none; margin-bottom: 28px;
+}
+.service-bullets li {
+  font-family: var(--font-sans);
+  font-size: 11px; line-height: 1.6; color: var(--text-mid);
+  padding: 5px 0 5px 18px; position: relative;
+  border-bottom: 1px solid rgba(0,8,20,0.04);
+}
+.service-bullets li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--gold); font-size: 10px;
+}
+
+.service-link {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--blue-dark); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: gap var(--transition), color var(--transition);
+}
+.service-link::after { content: '→'; }
+.service-card:hover .service-link { gap: 16px; color: var(--gold-dark); }
+
+/* Services CTA row */
+.services-cta {
+  margin-top: 48px;
+  background: var(--navy);
+  padding: 48px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 28px;
+}
+.services-cta-text {
+  font-family: var(--font-serif);
+  font-size: 28px; font-weight: 300; color: var(--white);
+}
+.services-cta-text em { font-style: italic; color: var(--gold-light); }
+
+/* ═══════════════════════════════════════════════
+   CHIFFRES — DARK NAVY BG
+═══════════════════════════════════════════════ */
+#chiffres {
+  background: var(--navy);
+  padding: 100px 0;
+  position: relative; overflow: hidden;
+}
+#chiffres::before {
+  content: '';
+  position: absolute; top: -50%; right: -15%;
+  width: 700px; height: 700px;
+  border: 1px solid rgba(200,169,110,0.06);
+  border-radius: 50%; pointer-events: none;
+}
+
+.chiffres-inner {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; position: relative; z-index: 1;
+}
+.chiffre-block {
+  padding: 20px 32px; text-align: center;
+  border-right: 1px solid rgba(200,169,110,0.1);
+}
+.chiffre-block:last-child { border-right: none; }
+.chiffre-val {
+  font-family: var(--font-serif);
+  font-size: clamp(48px,5vw,72px); font-weight: 300;
+  color: var(--gold); line-height: 1;
+}
+.chiffre-val sup { font-size: 0.45em; vertical-align: super; }
+.chiffre-lbl {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--offwhite); opacity: 0.6; margin-top: 10px;
+}
+
+/* ═══════════════════════════════════════════════
+   EXPERTISE — WHITE BG
+═══════════════════════════════════════════════ */
+#expertise {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.expertise-header { margin-bottom: 64px; }
+.expertise-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.expertise-item {
+  border-top: 2px solid var(--cream-dark);
+  padding-top: 28px;
+  transition: border-color var(--transition);
+}
+.expertise-item:hover { border-top-color: var(--gold); }
+.expertise-item-icon {
+  font-size: 28px; margin-bottom: 16px; display: block;
+}
+.expertise-item-title {
+  font-family: var(--font-serif);
+  font-size: 20px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 12px; line-height: 1.25;
+}
+.expertise-item-desc {
+  font-family: var(--font-sans);
+  font-size: 12px; line-height: 1.9; color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════
+   METHODE — LIGHT BLUE BG
+═══════════════════════════════════════════════ */
+#methode {
+  padding: 120px 0;
+  background: var(--light-blue2);
+}
+
+.methode-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; margin-bottom: 72px;
+}
+
+.methode-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; background: var(--white);
+  border: 1px solid rgba(0,24,71,0.08);
+  box-shadow: var(--shadow-md);
+}
+.methode-step {
+  padding: 44px 32px;
+  border-right: 1px solid rgba(0,24,71,0.06);
+  position: relative;
+  transition: background var(--transition);
+}
+.methode-step:last-child { border-right: none; }
+.methode-step:hover { background: var(--navy); }
+.methode-step:hover .step-num,
+.methode-step:hover .step-title,
+.methode-step:hover .step-desc { color: var(--white); }
+.methode-step:hover .step-num { color: var(--gold); }
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 11px; letter-spacing: 0.2em;
+  color: var(--gold); margin-bottom: 32px;
+  display: flex; align-items: center; gap: 10px;
+  transition: color var(--transition);
+}
+.step-num::after {
+  content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.2;
+}
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 20px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 12px; transition: color var(--transition);
+}
+.step-desc {
+  font-family: var(--font-sans);
+  font-size: 11px; line-height: 1.9; color: var(--text-light);
+  transition: color var(--transition);
+}
+
+/* ═══════════════════════════════════════════════
+   MAÎTRE — DARK + LIGHT SPLIT
+═══════════════════════════════════════════════ */
+#maitre {
+  padding: 120px 0;
+  background: var(--cream);
+}
+.maitre-grid {
+  display: grid; grid-template-columns: 1fr 1.5fr;
+  gap: 100px; align-items: center;
+}
+.maitre-portrait {
+  position: relative;
+}
+.maitre-portrait-frame {
+  background: linear-gradient(145deg, var(--navy) 0%, var(--blue-dark) 100%);
+  aspect-ratio: 3/4; position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.maitre-portrait-frame::before {
+  content: '';
+  position: absolute; top: 16px; right: -16px; bottom: -16px; left: 16px;
+  border: 1px solid rgba(200,169,110,0.3);
+  pointer-events: none; z-index: 2;
+}
+.maitre-initials {
+  font-family: var(--font-serif);
+  font-size: 120px; font-weight: 300;
+  color: rgba(200,169,110,0.15); line-height: 1;
+  letter-spacing: -0.04em;
+}
+.maitre-ribbon {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--gold);
+  padding: 16px 24px;
+  z-index: 3;
+}
+.maitre-ribbon-name {
+  font-family: var(--font-serif);
+  font-size: 20px; font-weight: 500; color: var(--deep);
+}
+.maitre-ribbon-title {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--deep); opacity: 0.7;
+}
+
+.maitre-text {}
+.maitre-text .section-title-dark { margin-bottom: 24px; }
+.maitre-text .section-body-dark { margin-bottom: 16px; }
+
+.maitre-credentials {
+  display: flex; flex-direction: column; gap: 12px;
+  margin-top: 36px;
+}
+.maitre-cred {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 16px 20px;
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+}
+.maitre-cred-icon { color: var(--gold); font-size: 18px; flex-shrink: 0; }
+.maitre-cred-title {
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--blue-dark); margin-bottom: 2px;
+}
+.maitre-cred-text {
+  font-family: var(--font-sans);
+  font-size: 12px; color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════
+   TÉMOIGNAGES — NAVY BG
+═══════════════════════════════════════════════ */
+#temoignages {
+  padding: 120px 0;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.temo-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 56px;
+}
+
+.temo-track-wrap { overflow: hidden; }
+.temo-track {
+  display: flex; gap: 28px;
+  transition: transform 0.7s cubic-bezier(0.77,0,0.175,1);
+}
+.temo-card {
+  flex: 0 0 calc(50% - 14px);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,169,110,0.1);
+  padding: 48px 44px;
+  position: relative;
+}
+.temo-card::before {
+  content: '"';
+  font-family: var(--font-serif);
+  font-size: 100px; font-style: italic;
+  color: rgba(200,169,110,0.07);
+  position: absolute; top: 8px; left: 30px;
+  line-height: 1; pointer-events: none;
+}
+.temo-quote {
+  font-family: var(--font-serif);
+  font-size: 19px; font-style: italic; font-weight: 300;
+  color: var(--text-white); line-height: 1.75;
+  margin-bottom: 32px; position: relative;
+}
+.temo-author {
+  display: flex; align-items: center; gap: 18px;
+}
+.temo-avatar {
+  width: 46px; height: 46px;
+  background: rgba(200,169,110,0.15);
+  border: 1px solid rgba(200,169,110,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 18px; color: var(--gold);
+}
+.temo-name {
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--white);
+}
+.temo-role {
+  font-family: var(--font-sans);
+  font-size: 10px; color: var(--grey);
+  margin-top: 2px;
+}
+.temo-stars { margin-left: auto; color: var(--gold); letter-spacing: 2px; font-size: 12px; }
+
+.slider-btns {
+  display: flex; gap: 10px;
+}
+.slider-btn {
+  width: 46px; height: 46px;
+  border: 1px solid rgba(200,169,110,0.25);
+  background: transparent; color: var(--gold);
+  font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+.slider-btn:hover { background: var(--gold); color: var(--deep); border-color: var(--gold); }
+
+/* ═══════════════════════════════════════════════
+   POURQUOI NOUS — WHITE BG
+═══════════════════════════════════════════════ */
+#pourquoi {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.pourquoi-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 100px; align-items: center;
+}
+.pourquoi-reasons {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--cream-dark);
+}
+.pourquoi-reason {
+  background: var(--white);
+  display: flex; gap: 24px; padding: 28px 28px;
+  align-items: flex-start;
+  transition: background var(--transition);
+}
+.pourquoi-reason:hover { background: var(--light-blue); }
+.pourquoi-reason-num {
+  font-family: var(--font-serif);
+  font-size: 36px; font-weight: 300; color: var(--cream-dark);
+  line-height: 1; flex-shrink: 0; width: 44px;
+  transition: color var(--transition);
+}
+.pourquoi-reason:hover .pourquoi-reason-num { color: var(--gold); }
+.pourquoi-reason-title {
+  font-family: var(--font-serif);
+  font-size: 20px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.pourquoi-reason-desc {
+  font-family: var(--font-sans);
+  font-size: 12px; line-height: 1.85; color: var(--text-light);
+}
+
+.pourquoi-visual {
+  position: relative;
+}
+.pourquoi-box {
+  background: var(--navy);
+  padding: 60px 48px;
+  position: relative; overflow: hidden;
+}
+.pourquoi-box::before {
+  content: '';
+  position: absolute; top: -50%; right: -50%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+}
+.pourquoi-box-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+}
+.pourquoi-box-title {
+  font-family: var(--font-serif);
+  font-size: 32px; font-weight: 300; color: var(--white);
+  line-height: 1.25; margin-bottom: 24px;
+}
+.pourquoi-box-title em { font-style: italic; color: var(--gold-light); }
+.pourquoi-box-desc {
+  font-family: var(--font-sans);
+  font-size: 12px; line-height: 2; color: var(--offwhite);
+  margin-bottom: 36px;
+}
+.pourquoi-certif {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px;
+}
+.pourquoi-certif span {
+  font-family: var(--font-sans);
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+  border: 1px solid rgba(200,169,110,0.2);
+  color: var(--gold); padding: 5px 12px;
+}
+
+/* ═══════════════════════════════════════════════
+   DEVIS — CREAM BG
+═══════════════════════════════════════════════ */
+#devis {
+  padding: 120px 0;
+  background: var(--parchment);
+}
+
+.devis-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 80px; align-items: start;
+}
+
+.devis-left {}
+.devis-left .section-title-dark { margin-bottom: 20px; }
+.devis-left .section-body-dark { margin-bottom: 36px; }
+
+.devis-contact-items {
+  display: flex; flex-direction: column; gap: 0;
+  border: 1px solid var(--cream-dark);
+  margin-bottom: 36px;
+}
+.devis-contact-item {
+  display: flex; align-items: center; gap: 20px;
+  padding: 20px 24px;
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-dark);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+.devis-contact-item:last-child { border-bottom: none; }
+.devis-contact-item:hover { background: var(--light-blue); }
+.devis-contact-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; color: var(--gold);
+}
+.devis-contact-label {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 3px;
+}
+.devis-contact-val {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 500; color: var(--text-dark);
+}
+.devis-contact-val a {
+  color: inherit; text-decoration: none;
+  transition: color var(--transition);
+}
+.devis-contact-val a:hover { color: var(--gold-dark); }
+
+.devis-hours {
+  background: var(--navy);
+  padding: 28px 28px;
+}
+.devis-hours-title {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+}
+.devis-hours-row {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 11px; color: var(--offwhite);
+  padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.devis-hours-row:last-child { border-bottom: none; }
+
+/* Form */
+.devis-form {
+  background: var(--white);
+  padding: 52px 48px;
+  box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--gold);
+}
+.devis-form-title {
+  font-family: var(--font-serif);
+  font-size: 26px; font-weight: 400; color: var(--text-dark);
+  margin-bottom: 32px;
+}
+.devis-form-title em { font-style: italic; }
+
+.form-group {
+  display: flex; flex-direction: column; margin-bottom: 16px;
+}
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 7px;
+}
+.form-input, .form-select, .form-textarea {
+  font-family: var(--font-sans); font-size: 13px;
+  color: var(--text-dark); background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  padding: 14px 16px; outline: none;
+  transition: border-color var(--transition), background var(--transition);
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold); background: var(--white);
+  box-shadow: 0 0 0 3px rgba(200,169,110,0.08);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--text-light); opacity: 0.6; }
+.form-textarea { min-height: 120px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-select option { background: var(--white); color: var(--text-dark); }
+
+.form-notice {
+  font-family: var(--font-sans);
+  font-size: 10px; color: var(--text-light); letter-spacing: 0.05em;
+  margin-top: 14px; display: flex; gap: 8px; align-items: flex-start;
+}
+.form-notice span { color: var(--gold); flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════════
+   MAP STRIP — WHITE BG
+═══════════════════════════════════════════════ */
+#localisation {
+  padding: 80px 0;
+  background: var(--white);
+  border-top: 1px solid var(--cream-dark);
+}
+.localisation-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+}
+.map-placeholder {
+  background: var(--light-blue);
+  border: 1px solid rgba(26,77,176,0.1);
+  aspect-ratio: 16/9;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.map-placeholder iframe {
+  width: 100%; height: 100%; border: none; position: absolute; inset: 0;
+}
+.map-overlay-badge {
+  position: absolute; bottom: 16px; left: 16px;
+  background: var(--navy); color: var(--white);
+  padding: 10px 16px;
+  font-family: var(--font-sans);
+  font-size: 10px; letter-spacing: 0.14em;
+  z-index: 2;
+}
+
+.address-block {}
+.address-block .section-eyebrow { margin-bottom: 14px; }
+.address-block .section-title-dark { font-size: 32px; margin-bottom: 24px; }
+
+.address-lines {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.address-line {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding-bottom: 16px; border-bottom: 1px solid var(--cream-dark);
+}
+.address-line:last-child { border-bottom: none; }
+.address-line-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.address-line-label {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 3px;
+}
+.address-line-val {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 400; color: var(--text-dark);
+}
+.address-line-val a {
+  color: inherit; text-decoration: none;
+  transition: color var(--transition);
+}
+.address-line-val a:hover { color: var(--gold-dark); }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer {
+  background: var(--deep);
+  border-top: 1px solid rgba(200,169,110,0.12);
+}
+
+.footer-main {
+  padding: 80px 0 60px;
+  max-width: 1320px; margin: 0 auto; padding-left: 48px; padding-right: 48px;
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-brand svg { width: 52px; height: 52px; margin-bottom: 16px; }
+.footer-brand-name {
+  font-family: var(--font-serif);
+  font-size: 20px; font-weight: 400; color: var(--white);
+  letter-spacing: 0.05em; margin-bottom: 4px;
+}
+.footer-brand-sub {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 18px;
+}
+.footer-brand-desc {
+  font-family: var(--font-sans);
+  font-size: 12px; line-height: 1.9; color: rgba(255,255,255,0.35);
+}
+.footer-brand-badges {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+}
+.footer-badge {
+  border: 1px solid rgba(200,169,110,0.15);
+  font-family: var(--font-sans);
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(200,169,110,0.5); padding: 4px 10px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-sans);
+  font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(200,169,110,0.1);
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-family: var(--font-sans);
+  font-size: 12px; color: rgba(255,255,255,0.38); text-decoration: none;
+  transition: color var(--transition), padding-left var(--transition);
+  display: block;
+}
+.footer-col a:hover { color: var(--gold); padding-left: 6px; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(200,169,110,0.07);
+  padding: 24px 48px;
+  max-width: 1320px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 14px;
+}
+.footer-copy {
+  font-family: var(--font-sans);
+  font-size: 10px; color: rgba(255,255,255,0.22); letter-spacing: 0.1em;
+}
+.footer-legal {
+  display: flex; gap: 28px;
+}
+.footer-legal a {
+  font-family: var(--font-sans);
+  font-size: 10px; color: rgba(255,255,255,0.22); text-decoration: none;
+  letter-spacing: 0.1em; transition: color var(--transition);
+}
+.footer-legal a:hover { color: var(--gold); }
+
+/* Back to top */
+#btt {
+  position: fixed; bottom: 36px; right: 36px; z-index: 800;
+  width: 46px; height: 46px;
+  background: var(--navy); color: var(--gold);
+  border: 1px solid rgba(200,169,110,0.2);
+  font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(16px);
+  transition: opacity var(--transition), transform var(--transition), background var(--transition);
+}
+#btt.show { opacity: 1; transform: translateY(0); }
+#btt:hover { background: var(--gold); color: var(--deep); }
+
+/* ═══════════════════════════════════════════════
+   TOAST NOTIFICATION
+═══════════════════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 100px; right: 36px; z-index: 2000;
+  background: var(--navy); color: var(--white);
+  border-left: 3px solid var(--gold);
+  padding: 18px 24px; min-width: 280px;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-sans); font-size: 12px;
+  transform: translateX(120%);
+  transition: transform 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+.toast.show { transform: translateX(0); }
+.toast strong { color: var(--gold); display: block; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════ */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes countUp {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hero-main { grid-template-columns: 1fr; gap: 0; }
+  .hero-right { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 60px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .chiffres-inner { grid-template-columns: 1fr 1fr; }
+  .chiffre-block { border-right: none; border-bottom: 1px solid rgba(200,169,110,0.1); }
+  .expertise-grid { grid-template-columns: 1fr 1fr; }
+  .methode-steps { grid-template-columns: 1fr 1fr; }
+  .methode-header { grid-template-columns: 1fr; gap: 32px; }
+  .maitre-grid { grid-template-columns: 1fr; gap: 60px; }
+  .pourquoi-grid { grid-template-columns: 1fr; gap: 60px; }
+  .devis-grid { grid-template-columns: 1fr; gap: 60px; }
+  .localisation-grid { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .hero-bottom-inner { grid-template-columns: 1fr 1fr; }
+  .services-header { grid-template-columns: 1fr; }
+  .temo-header { flex-direction: column; gap: 24px; align-items: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .topbar-left { flex-wrap: wrap; gap: 12px; }
+  .topbar-inner { flex-direction: column; }
+  .nav-inner { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .container { padding: 0 24px; }
+  .container-sm { padding: 0 24px; }
+  .hero-main { padding: 60px 24px; }
+  .hero-bottom-inner { grid-template-columns: 1fr; }
+  .hero-stat { border-right: none; border-bottom: 1px solid rgba(0,8,20,0.06); }
+  .services-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr 1fr; }
+  .methode-steps { grid-template-columns: 1fr; }
+  .temo-card { flex: 0 0 100%; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr; padding: 48px 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; padding: 20px 24px; }
+  .services-cta { padding: 36px 24px; }
+  .devis-form { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <strong>✓ Message envoyé</strong>
+  Nous vous répondrons dans les 24 heures ouvrables.
+</div>
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="#apropos" onclick="closeMobile()">À Propos</a>
+  <a href="#services" onclick="closeMobile()">Nos Services</a>
+  <a href="#methode" onclick="closeMobile()">Notre Approche</a>
+  <a href="#maitre" onclick="closeMobile()">Maître Gnagne</a>
+  <a href="#pourquoi" onclick="closeMobile()">Pourquoi Nous</a>
+  <a href="#devis" onclick="closeMobile()">Prendre Rendez-vous</a>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <span class="icon">📍</span>
+        Abidjan, Plateau — Côte d'Ivoire
+      </div>
+      <div class="topbar-item">
+        <span class="icon">☎</span>
+        <a href="tel:+22507099796 97">+225 07 09 97 96 97</a>
+      </div>
+      <div class="topbar-item">
+        <span class="icon">✉</span>
+        <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-badge">Lun–Ven : 08h–18h</span>
+      <span class="topbar-badge">Urgences 24/7</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-shield">
+        <svg viewBox="0 0 560.11066 518.25543" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(276.19119,512.9389)">
+            <g transform="matrix(2.0012952,0,0,1.9534475,479.54445,-526.3847)">
+              <path style="fill:#c8a96e;stroke:none" d="m -230.22281,267.7225 c -0.30154,-0.36188 -5.9851,-11.6316 -12.63012,-25.04384 -6.64503,-13.41224 -14.37395,-29.00531 -17.17537,-34.65127 -2.80143,-5.64595 -5.73386,-10.44762 -6.51652,-10.67037 -0.78265,-0.22274 -2.02558,0.0579 -2.76207,0.62353 -0.73649,0.56569 -4.78818,8.95523 -9.00376,18.64344 -4.21558,9.68821 -7.96561,17.60592 -8.33339,17.59491 -0.36779,-0.011 -7.22478,-3.5989 -15.23777,-7.97308 -8.01299,-4.37418 -22.29321,-12.125 -31.73383,-17.22406 l -17.16475,-9.27101 -0.0162,-19.66665 -0.0162,-19.66664 11.26565,-8.33182 c 6.1961,-4.58249 11.5961,-8.33181 12,-8.33181 0.40389,0 0.73435,10.50557 0.73435,23.34571 v 23.3457 l 5.02454,2.94572 c 2.7635,1.62014 8.67281,4.85258 13.13179,7.18318 8.96625,4.68645 10.24067,4.71165 12.4398,0.24594 0.69139,-1.40398 6.83275,-14.14217 13.64746,-28.30707 l 12.39039,-25.75437 4.20034,3.17426 c 3.44079,2.60027 4.92141,4.70921 8.1879,11.66245 2.19316,4.66848 11.57696,23.67407 20.85289,42.23464 15.53335,31.0813 17.05666,33.76385 19.28807,33.96636 1.77341,0.16094 4.46662,-1.07356 10.04861,-4.60606 8.91738,-5.64325 11.76818,-8.24485 15.29433,-13.95737 5.75088,-9.31668 5.363,-19.66006 -1.09616,-29.23039 -4.60751,-6.8268 -10.15126,-11.37435 -28.20362,-23.13545 -17.86928,-11.64182 -32.34777,-22.62948 -38.07392,-28.89412 -5.67783,-6.21176 -12.2871,-16.54299 -12.47849,-19.50565 -0.14998,-2.32172 0.0769,-2.45563 8.84607,-5.22196 4.95,-1.56152 9.592,-2.762 10.31556,-2.66773 0.72355,0.0943 2.47675,2.34082 3.89599,4.99232 6.10557,11.40679 17.18815,21.26383 41.52316,36.93147 18.46585,11.88889 22.42239,14.76212 28.22151,20.49446 16.40623,16.2173 19.23008,38.10352 7.20192,55.81837 -6.46959,9.52831 -9.58974,11.80457 -43.15814,31.48559 -13.91592,8.15885 -14.18499,8.2928 -14.91007,7.42267 z m 78.42194,-44.73688 c 0.007,-0.13351 0.69248,-2.07842 1.52434,-4.322 0.83187,-2.24359 1.79545,-7.51495 2.1413,-11.71415 l 0.62882,-7.6349 7.59683,-4.23825 7.59684,-4.23825 0.25841,-41.8554 c 0.1727,-27.97283 -0.0831,-42.10874 -0.77135,-42.61917 -0.62859,-0.4662 -5.93577,-0.68314 -13.62283,-0.55682 -6.92619,0.11382 -15.01658,-0.0176 -17.97865,-0.29212 l -5.38558,-0.49907 v -7.982211 c 0,-6.18447 -0.33726,-8.18981 -1.49746,-8.90397 -1.17933,-0.72592 -3.88802,-0.74166 -12.75,-0.074 -65.16749,4.90938 -119.2923,22.952001 -162.17659,54.061871 -7.89935,5.73049 -9.25258,6.49155 -6.63282,3.73036 5.33627,-5.62439 19.77187,-16.69553 30.53804,-23.42065 27.36228,-17.09194 60.01423,-29.342471 94.01883,-35.274481 18.9769,-3.31047 30.77902,-4.31685 55.64641,-4.74507 25.12685,-0.4327 36.31649,0.11905 59.85359,2.9513 11.04541,1.32911 12.77272,1.69482 9.5,2.01139 l -4,0.38691 -0.25631,55.765681 -0.25631,55.76567 -4.24369,2.55074 c -6.89116,4.14205 -39.75563,21.63364 -39.73182,21.14663 z m -199.23688,-147.114511 -0.27499,-54.45518 -6.97318,-5.2115 -6.97318,-5.21151 h 18.66191 18.6619 l 0.63961,3.16339 c 0.35178,1.73987 0.49185,24.63863 0.31127,50.88615 l -0.32833,47.722771 -5.62951,3.81283 c -3.09623,2.09705 -8.37248,6.04829 -11.725,8.78053 l -6.0955,4.96771 z m 73.79755,7.62114 c 3.19073,-16.87019 12.94824,-31.54326 29.93459,-45.01482 l 7.49287,-5.94246 v -10.77102 -10.77103 h 11.94521 11.94521 l 0.30479,3.52299 c 0.29388,3.39688 0.41217,3.51924 3.30479,3.41844 1.65,-0.0575 6.76397,-1.14716 11.36438,-2.42147 14.32465,-3.9679 21.56341,-4.51996 59.26661,-4.51996 h 33.86901 v 8.46375 8.46376 l -34.75,0.32512 c -39.47484,0.36933 -44.27796,0.89511 -60.14348,6.58378 -13.81844,4.95467 -13.10652,3.7422 -13.10652,22.32171 v 15.81663 l -10.61657,1.33221 c -5.83912,0.73271 -11.23912,1.50939 -12,1.72594 -1.1078,0.31529 -1.38343,-0.80424 -1.38343,-5.61906 0,-5.90256 -0.0454,-6.0128 -2.47432,-6.0128 -2.9044,0 -4.23188,1.64507 -7.56502,9.3749 -2.18741,5.07277 -2.45332,5.33339 -6.31768,6.1921 -2.21879,0.49304 -7.83408,2.19852 -12.47842,3.78993 -4.64434,1.59143 -8.61164,2.8935 -8.81622,2.8935 -0.20459,0 -0.1037,-1.41847 0.2242,-3.15214 z"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="nav-brand-block">
+        <span class="nav-brand-top">Étude Notariale</span>
+        <span class="nav-brand-main">World Global Security</span>
+        <span class="nav-brand-sub">Maître Gnagne Junior — Notaire</span>
+      </div>
+    </a>
+
+    <!-- Links -->
+    <ul class="nav-links">
+      <li><a href="#apropos">À Propos</a></li>
+      <li class="has-dropdown">
+        <a href="#services">Nos Services</a>
+        <div class="dropdown">
+          <a href="#services"><span class="d-icon">🏠</span> Transactions Immobilières</a>
+          <a href="#services"><span class="d-icon">⚖️</span> Successions & Héritages</a>
+          <a href="#services"><span class="d-icon">💍</span> Droit de la Famille</a>
+          <a href="#services"><span class="d-icon">🏢</span> Droit des Sociétés</a>
+          <a href="#services"><span class="d-icon">📜</span> Authentification d'Actes</a>
+          <a href="#services"><span class="d-icon">🌍</span> Légalisations & Apostilles</a>
+          <a href="#services"><span class="d-icon">📦</span> Gestion de Biens & Actifs</a>
+          <a href="#services"><span class="d-icon">💾</span> Récupération de Données</a>
+        </div>
+      </li>
+      <li><a href="#methode">Notre Approche</a></li>
+      <li><a href="#maitre">Le Notaire</a></li>
+      <li><a href="#pourquoi">Pourquoi Nous</a></li>
+      <li><a href="#devis" class="nav-cta">Prendre RDV</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow2"></div>
+
+  <div class="hero-main">
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-eyebrow">Étude Notariale — Abidjan, Côte d'Ivoire</div>
+      <h1 class="hero-title">
+        <em>L'Acte Notarié,</em>
+        <strong>Garant de</strong>
+        Vos Droits
+      </h1>
+      <div class="hero-notary-name">Maître Gnagne Junior &nbsp;—&nbsp; Notaire Assermenté</div>
+      <p class="hero-desc">
+        L'étude notariale World Global Security vous accompagne dans tous vos actes juridiques
+        et patrimoniaux avec rigueur, confidentialité et excellence. De la transaction immobilière
+        à la succession, chaque acte est traité avec le plus grand soin.
+      </p>
+      <div class="hero-actions">
+        <a href="#devis" class="btn-gold"><span>Prendre Rendez-vous</span> →</a>
+        <a href="#services" class="btn-outline-white">Découvrir nos Services</a>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="hero-right">
+      <div class="hero-shield-wrap">
+        <!-- Rings -->
+        <svg class="hero-rings" style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 420 420">
+          <circle cx="210" cy="210" r="195" fill="none" stroke="rgba(200,169,110,0.08)" stroke-dasharray="6 14"/>
+          <circle cx="210" cy="210" r="160" fill="none" stroke="rgba(26,77,176,0.15)" stroke-dasharray="3 18"/>
+        </svg>
+        <svg class="hero-rings-r" style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 420 420">
+          <circle cx="210" cy="210" r="125" fill="none" stroke="rgba(200,169,110,0.05)" stroke-dasharray="8 10"/>
+        </svg>
+        <!-- Glow -->
+        <div style="position:absolute;width:200px;height:200px;background:radial-gradient(circle,rgba(26,77,176,0.2) 0%,transparent 70%);border-radius:50%"></div>
+        <!-- Shield SVG -->
+        <svg class="hero-shield-main" viewBox="0 0 560.11066 518.25543" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(276.19119,512.9389)">
+            <g transform="matrix(2.0012952,0,0,1.9534475,479.54445,-526.3847)">
+              <path style="fill:#c8a96e;stroke:none" d="m -230.22281,267.7225 c -0.30154,-0.36188 -5.9851,-11.6316 -12.63012,-25.04384 -6.64503,-13.41224 -14.37395,-29.00531 -17.17537,-34.65127 -2.80143,-5.64595 -5.73386,-10.44762 -6.51652,-10.67037 -0.78265,-0.22274 -2.02558,0.0579 -2.76207,0.62353 -0.73649,0.56569 -4.78818,8.95523 -9.00376,18.64344 -4.21558,9.68821 -7.96561,17.60592 -8.33339,17.59491 -0.36779,-0.011 -7.22478,-3.5989 -15.23777,-7.97308 -8.01299,-4.37418 -22.29321,-12.125 -31.73383,-17.22406 l -17.16475,-9.27101 -0.0162,-19.66665 -0.0162,-19.66664 11.26565,-8.33182 c 6.1961,-4.58249 11.5961,-8.33181 12,-8.33181 0.40389,0 0.73435,10.50557 0.73435,23.34571 v 23.3457 l 5.02454,2.94572 c 2.7635,1.62014 8.67281,4.85258 13.13179,7.18318 8.96625,4.68645 10.24067,4.71165 12.4398,0.24594 0.69139,-1.40398 6.83275,-14.14217 13.64746,-28.30707 l 12.39039,-25.75437 4.20034,3.17426 c 3.44079,2.60027 4.92141,4.70921 8.1879,11.66245 2.19316,4.66848 11.57696,23.67407 20.85289,42.23464 15.53335,31.0813 17.05666,33.76385 19.28807,33.96636 1.77341,0.16094 4.46662,-1.07356 10.04861,-4.60606 8.91738,-5.64325 11.76818,-8.24485 15.29433,-13.95737 5.75088,-9.31668 5.363,-19.66006 -1.09616,-29.23039 -4.60751,-6.8268 -10.15126,-11.37435 -28.20362,-23.13545 -17.86928,-11.64182 -32.34777,-22.62948 -38.07392,-28.89412 -5.67783,-6.21176 -12.2871,-16.54299 -12.47849,-19.50565 -0.14998,-2.32172 0.0769,-2.45563 8.84607,-5.22196 4.95,-1.56152 9.592,-2.762 10.31556,-2.66773 0.72355,0.0943 2.47675,2.34082 3.89599,4.99232 6.10557,11.40679 17.18815,21.26383 41.52316,36.93147 18.46585,11.88889 22.42239,14.76212 28.22151,20.49446 16.40623,16.2173 19.23008,38.10352 7.20192,55.81837 -6.46959,9.52831 -9.58974,11.80457 -43.15814,31.48559 -13.91592,8.15885 -14.18499,8.2928 -14.91007,7.42267 z m 78.42194,-44.73688 c 0.007,-0.13351 0.69248,-2.07842 1.52434,-4.322 0.83187,-2.24359 1.79545,-7.51495 2.1413,-11.71415 l 0.62882,-7.6349 7.59683,-4.23825 7.59684,-4.23825 0.25841,-41.8554 c 0.1727,-27.97283 -0.0831,-42.10874 -0.77135,-42.61917 -0.62859,-0.4662 -5.93577,-0.68314 -13.62283,-0.55682 -6.92619,0.11382 -15.01658,-0.0176 -17.97865,-0.29212 l -5.38558,-0.49907 v -7.982211 c 0,-6.18447 -0.33726,-8.18981 -1.49746,-8.90397 -1.17933,-0.72592 -3.88802,-0.74166 -12.75,-0.074 -65.16749,4.90938 -119.2923,22.952001 -162.17659,54.061871 -7.89935,5.73049 -9.25258,6.49155 -6.63282,3.73036 5.33627,-5.62439 19.77187,-16.69553 30.53804,-23.42065 27.36228,-17.09194 60.01423,-29.342471 94.01883,-35.274481 18.9769,-3.31047 30.77902,-4.31685 55.64641,-4.74507 25.12685,-0.4327 36.31649,0.11905 59.85359,2.9513 11.04541,1.32911 12.77272,1.69482 9.5,2.01139 l -4,0.38691 -0.25631,55.765681 -0.25631,55.76567 -4.24369,2.55074 c -6.89116,4.14205 -39.75563,21.63364 -39.73182,21.14663 z m -199.23688,-147.114511 -0.27499,-54.45518 -6.97318,-5.2115 -6.97318,-5.21151 h 18.66191 18.6619 l 0.63961,3.16339 c 0.35178,1.73987 0.49185,24.63863 0.31127,50.88615 l -0.32833,47.722771 -5.62951,3.81283 c -3.09623,2.09705 -8.37248,6.04829 -11.725,8.78053 l -6.0955,4.96771 z m 73.79755,7.62114 c 3.19073,-16.87019 12.94824,-31.54326 29.93459,-45.01482 l 7.49287,-5.94246 v -10.77102 -10.77103 h 11.94521 11.94521 l 0.30479,3.52299 c 0.29388,3.39688 0.41217,3.51924 3.30479,3.41844 1.65,-0.0575 6.76397,-1.14716 11.36438,-2.42147 14.32465,-3.9679 21.56341,-4.51996 59.26661,-4.51996 h 33.86901 v 8.46375 8.46376 l -34.75,0.32512 c -39.47484,0.36933 -44.27796,0.89511 -60.14348,6.58378 -13.81844,4.95467 -13.10652,3.7422 -13.10652,22.32171 v 15.81663 l -10.61657,1.33221 c -5.83912,0.73271 -11.23912,1.50939 -12,1.72594 -1.1078,0.31529 -1.38343,-0.80424 -1.38343,-5.61906 0,-5.90256 -0.0454,-6.0128 -2.47432,-6.0128 -2.9044,0 -4.23188,1.64507 -7.56502,9.3749 -2.18741,5.07277 -2.45332,5.33339 -6.31768,6.1921 -2.21879,0.49304 -7.83408,2.19852 -12.47842,3.78993 -4.64434,1.59143 -8.61164,2.8935 -8.81622,2.8935 -0.20459,0 -0.1037,-1.41847 0.2242,-3.15214 z"/>
+            </g>
+          </g>
+        </svg>
+        <!-- Info cards -->
+        <div class="hero-info-cards">
+          <div class="hero-info-card">
+            <div class="hero-info-num">15<sup>+</sup></div>
+            <div class="hero-info-label">Années d'Exercice</div>
+          </div>
+          <div class="hero-info-card">
+            <div class="hero-info-num">3 500<sup>+</sup></div>
+            <div class="hero-info-label">Actes Authentifiés</div>
+          </div>
+          <div class="hero-info-card">
+            <div class="hero-info-num">100<sup>%</sup></div>
+            <div class="hero-info-label">Conformité Légale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom stat bar -->
+  <div class="hero-bottom">
+    <div class="hero-bottom-inner">
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🏠</div>
+        <div class="hero-stat-text">
+          <div class="hero-stat-val">Immobilier</div>
+          <div class="hero-stat-lbl">Ventes, achats & baux</div>
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">⚖️</div>
+        <div class="hero-stat-text">
+          <div class="hero-stat-val">Successions</div>
+          <div class="hero-stat-lbl">Héritages & testaments</div>
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🏢</div>
+        <div class="hero-stat-text">
+          <div class="hero-stat-val">Droit des Sociétés</div>
+          <div class="hero-stat-lbl">Création & cession</div>
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">📜</div>
+        <div class="hero-stat-text">
+          <div class="hero-stat-val">Authentification</div>
+          <div class="hero-stat-lbl">Actes & légalisations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <div class="marquee-item">Transactions Immobilières</div>
+    <div class="marquee-item">Successions & Héritages</div>
+    <div class="marquee-item">Contrats de Mariage</div>
+    <div class="marquee-item">Création de Sociétés</div>
+    <div class="marquee-item">Authentification d'Actes</div>
+    <div class="marquee-item">Légalisations & Apostilles</div>
+    <div class="marquee-item">Gestion de Biens Sensibles</div>
+    <div class="marquee-item">Récupération de Données</div>
+    <div class="marquee-item">Convoyages Diplomatiques</div>
+    <div class="marquee-item">Conseil Juridique</div>
+    <!-- Duplicate -->
+    <div class="marquee-item">Transactions Immobilières</div>
+    <div class="marquee-item">Successions & Héritages</div>
+    <div class="marquee-item">Contrats de Mariage</div>
+    <div class="marquee-item">Création de Sociétés</div>
+    <div class="marquee-item">Authentification d'Actes</div>
+    <div class="marquee-item">Légalisations & Apostilles</div>
+    <div class="marquee-item">Gestion de Biens Sensibles</div>
+    <div class="marquee-item">Récupération de Données</div>
+    <div class="marquee-item">Convoyages Diplomatiques</div>
+    <div class="marquee-item">Conseil Juridique</div>
+  </div>
+</div>
+
+<!-- ══════════════ À PROPOS ══════════════ -->
+<section id="apropos">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image side -->
+      <div class="about-image-col reveal">
+        <div class="about-frame">
+          <div class="about-frame-inner">
+            <svg viewBox="0 0 560.11066 518.25543" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(276.19119,512.9389)">
+                <g transform="matrix(2.0012952,0,0,1.9534475,479.54445,-526.3847)">
+                  <path style="fill:#c8a96e;stroke:none" d="m -230.22281,267.7225 c -0.30154,-0.36188 -5.9851,-11.6316 -12.63012,-25.04384 -6.64503,-13.41224 -14.37395,-29.00531 -17.17537,-34.65127 -2.80143,-5.64595 -5.73386,-10.44762 -6.51652,-10.67037 -0.78265,-0.22274 -2.02558,0.0579 -2.76207,0.62353 -0.73649,0.56569 -4.78818,8.95523 -9.00376,18.64344 -4.21558,9.68821 -7.96561,17.60592 -8.33339,17.59491 -0.36779,-0.011 -7.22478,-3.5989 -15.23777,-7.97308 -8.01299,-4.37418 -22.29321,-12.125 -31.73383,-17.22406 l -17.16475,-9.27101 -0.0162,-19.66665 -0.0162,-19.66664 11.26565,-8.33182 c 6.1961,-4.58249 11.5961,-8.33181 12,-8.33181 0.40389,0 0.73435,10.50557 0.73435,23.34571 v 23.3457 l 5.02454,2.94572 c 2.7635,1.62014 8.67281,4.85258 13.13179,7.18318 8.96625,4.68645 10.24067,4.71165 12.4398,0.24594 0.69139,-1.40398 6.83275,-14.14217 13.64746,-28.30707 l 12.39039,-25.75437 4.20034,3.17426 c 3.44079,2.60027 4.92141,4.70921 8.1879,11.66245 2.19316,4.66848 11.57696,23.67407 20.85289,42.23464 15.53335,31.0813 17.05666,33.76385 19.28807,33.96636 1.77341,0.16094 4.46662,-1.07356 10.04861,-4.60606 8.91738,-5.64325 11.76818,-8.24485 15.29433,-13.95737 5.75088,-9.31668 5.363,-19.66006 -1.09616,-29.23039 -4.60751,-6.8268 -10.15126,-11.37435 -28.20362,-23.13545 -17.86928,-11.64182 -32.34777,-22.62948 -38.07392,-28.89412 -5.67783,-6.21176 -12.2871,-16.54299 -12.47849,-19.50565 -0.14998,-2.32172 0.0769,-2.45563 8.84607,-5.22196 4.95,-1.56152 9.592,-2.762 10.31556,-2.66773 0.72355,0.0943 2.47675,2.34082 3.89599,4.99232 6.10557,11.40679 17.18815,21.26383 41.52316,36.93147 18.46585,11.88889 22.42239,14.76212 28.22151,20.49446 16.40623,16.2173 19.23008,38.10352 7.20192,55.81837 -6.46959,9.52831 -9.58974,11.80457 -43.15814,31.48559 -13.91592,8.15885 -14.18499,8.2928 -14.91007,7.42267 z m 78.42194,-44.73688 c 0.007,-0.13351 0.69248,-2.07842 1.52434,-4.322 0.83187,-2.24359 1.79545,-7.51495 2.1413,-11.71415 l 0.62882,-7.6349 7.59683,-4.23825 7.59684,-4.23825 0.25841,-41.8554 c 0.1727,-27.97283 -0.0831,-42.10874 -0.77135,-42.61917 -0.62859,-0.4662 -5.93577,-0.68314 -13.62283,-0.55682 -6.92619,0.11382 -15.01658,-0.0176 -17.97865,-0.29212 l -5.38558,-0.49907 v -7.982211 c 0,-6.18447 -0.33726,-8.18981 -1.49746,-8.90397 -1.17933,-0.72592 -3.88802,-0.74166 -12.75,-0.074 -65.16749,4.90938 -119.2923,22.952001 -162.17659,54.061871 -7.89935,5.73049 -9.25258,6.49155 -6.63282,3.73036 5.33627,-5.62439 19.77187,-16.69553 30.53804,-23.42065 27.36228,-17.09194 60.01423,-29.342471 94.01883,-35.274481 18.9769,-3.31047 30.77902,-4.31685 55.64641,-4.74507 25.12685,-0.4327 36.31649,0.11905 59.85359,2.9513 11.04541,1.32911 12.77272,1.69482 9.5,2.01139 l -4,0.38691 -0.25631,55.765681 -0.25631,55.76567 -4.24369,2.55074 c -6.89116,4.14205 -39.75563,21.63364 -39.73182,21.14663 z m -199.23688,-147.114511 -0.27499,-54.45518 -6.97318,-5.2115 -6.97318,-5.21151 h 18.66191 18.6619 l 0.63961,3.16339 c 0.35178,1.73987 0.49185,24.63863 0.31127,50.88615 l -0.32833,47.722771 -5.62951,3.81283 c -3.09623,2.09705 -8.37248,6.04829 -11.725,8.78053 l -6.0955,4.96771 z m 73.79755,7.62114 c 3.19073,-16.87019 12.94824,-31.54326 29.93459,-45.01482 l 7.49287,-5.94246 v -10.77102 -10.77103 h 11.94521 11.94521 l 0.30479,3.52299 c 0.29388,3.39688 0.41217,3.51924 3.30479,3.41844 1.65,-0.0575 6.76397,-1.14716 11.36438,-2.42147 14.32465,-3.9679 21.56341,-4.51996 59.26661,-4.51996 h 33.86901 v 8.46375 8.46376 l -34.75,0.32512 c -39.47484,0.36933 -44.27796,0.89511 -60.14348,6.58378 -13.81844,4.95467 -13.10652,3.7422 -13.10652,22.32171 v 15.81663 l -10.61657,1.33221 c -5.83912,0.73271 -11.23912,1.50939 -12,1.72594 -1.1078,0.31529 -1.38343,-0.80424 -1.38343,-5.61906 0,-5.90256 -0.0454,-6.0128 -2.47432,-6.0128 -2.9044,0 -4.23188,1.64507 -7.56502,9.3749 -2.18741,5.07277 -2.45332,5.33339 -6.31768,6.1921 -2.21879,0.49304 -7.83408,2.19852 -12.47842,3.78993 -4.64434,1.59143 -8.61164,2.8935 -8.81622,2.8935 -0.20459,0 -0.1037,-1.41847 0.2242,-3.15214 z"/>
+                </g>
+              </g>
+            </svg>
+            <div style="font-family:var(--font-sans);font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,169,110,0.4)">World Global Security</div>
+          </div>
+          <div class="about-badge">
+            <div class="about-badge-num">15</div>
+            <div class="about-badge-label">Ans<br>d'exercice</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="about-text-col reveal reveal-d2">
+        <div class="section-eyebrow">Notre Étude</div>
+        <h2 class="section-title-dark">Une étude fondée sur la <em>confiance</em> et l'authenticité</h2>
+        <p class="section-body-dark">
+          Établie au cœur d'Abidjan, l'étude notariale World Global Security est un cabinet
+          de référence en Côte d'Ivoire. Sous la direction de Maître Gnagne Junior, notaire
+          assermenté, notre étude assure la rédaction, l'authentification et la conservation
+          de vos actes juridiques dans le strict respect de la législation ivoirienne.
+        </p>
+        <p class="section-body-dark">
+          Qu'il s'agisse de transactions foncières, de successions, de création d'entreprises
+          ou d'actes de famille, chaque dossier bénéficie d'un traitement personnalisé,
+          rigoureux et confidentiel, assuré par une équipe de juristes expérimentés.
+        </p>
+        <div class="about-pillars">
+          <div class="about-pillar">
+            <span class="about-pillar-icon">🔒</span>
+            <div class="about-pillar-title">Confidentialité Totale</div>
+            <div class="about-pillar-desc">Chaque dossier est traité avec la plus stricte discrétion professionnelle.</div>
+          </div>
+          <div class="about-pillar">
+            <span class="about-pillar-icon">⚖️</span>
+            <div class="about-pillar-title">Rigueur Juridique</div>
+            <div class="about-pillar-desc">Conformité absolue avec le droit ivoirien et les standards internationaux.</div>
+          </div>
+          <div class="about-pillar">
+            <span class="about-pillar-icon">🤝</span>
+            <div class="about-pillar-title">Conseil Personnalisé</div>
+            <div class="about-pillar-desc">Un accompagnement sur mesure adapté à votre situation unique.</div>
+          </div>
+          <div class="about-pillar">
+            <span class="about-pillar-icon">🌍</span>
+            <div class="about-pillar-title">Portée Internationale</div>
+            <div class="about-pillar-desc">Légalisations, apostilles et actes à portée transfrontalière.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SERVICES ══════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-eyebrow">Nos Prestations</div>
+        <h2 class="section-title-dark">L'ensemble de nos <em>services notariaux</em></h2>
+      </div>
+      <p class="section-body-dark">
+        L'étude World Global Security propose une gamme complète de services notariaux
+        pour particuliers, entreprises et institutions, en Côte d'Ivoire et à l'international.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 1 -->
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon-wrap">🏠</div>
+        <div class="service-title">Transactions Immobilières</div>
+        <p class="service-desc">Sécurisation juridique de toutes vos opérations immobilières — ventes, achats, échanges et divisions foncières — dans le respect strict du droit ivoirien.</p>
+        <ul class="service-bullets">
+          <li>Ventes et achats de terrains & immeubles</li>
+          <li>Rédaction des compromis et actes définitifs</li>
+          <li>Purge des droits de préemption</li>
+          <li>Morcellements et remembrements fonciers</li>
+          <li>Hypothèques et garanties immobilières</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 2 -->
+      <div class="service-card reveal reveal-d1">
+        <div class="service-num">02</div>
+        <div class="service-icon-wrap">⚖️</div>
+        <div class="service-title">Successions & Héritages</div>
+        <p class="service-desc">Accompagnement complet dans le règlement des successions, de l'inventaire patrimonial au partage entre héritiers, avec toute la sérénité nécessaire.</p>
+        <ul class="service-bullets">
+          <li>Déclaration de succession et inventaire</li>
+          <li>Actes de notoriété et certificats d'hérédité</li>
+          <li>Partage amiable et liquidation successorale</li>
+          <li>Testaments olographes et authentiques</li>
+          <li>Successions internationales et transfrontalières</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 3 -->
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">03</div>
+        <div class="service-icon-wrap">💍</div>
+        <div class="service-title">Droit de la Famille</div>
+        <p class="service-desc">Assistance juridique notariale pour tous les actes de la vie familiale, du mariage à la protection des personnes vulnérables.</p>
+        <ul class="service-bullets">
+          <li>Contrats de mariage et régimes matrimoniaux</li>
+          <li>Donations entre époux et entre vifs</li>
+          <li>Adoption et actes d'état civil</li>
+          <li>Tutelles et curatelles</li>
+          <li>PACS et concubinage notarié</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 4 -->
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon-wrap">🏢</div>
+        <div class="service-title">Droit des Sociétés & Entreprises</div>
+        <p class="service-desc">Conseil et rédaction des actes juridiques nécessaires à la vie de votre entreprise, de sa constitution à sa transmission.</p>
+        <ul class="service-bullets">
+          <li>Création et immatriculation de sociétés (SARL, SA, SAS…)</li>
+          <li>Cessions de parts sociales et d'actions</li>
+          <li>Fusions, acquisitions et restructurations</li>
+          <li>Baux commerciaux et fonds de commerce</li>
+          <li>Dissolution et liquidation de sociétés</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 5 -->
+      <div class="service-card reveal reveal-d1">
+        <div class="service-num">05</div>
+        <div class="service-icon-wrap">📜</div>
+        <div class="service-title">Authentification d'Actes & Légalisations</div>
+        <p class="service-desc">Conférez force probante et exécutoire à tous vos documents juridiques grâce à l'authentification notariale et aux procédures internationales.</p>
+        <ul class="service-bullets">
+          <li>Authentification de signatures et documents</li>
+          <li>Légalisations pour usage à l'étranger</li>
+          <li>Apostilles Convention de La Haye</li>
+          <li>Certifications de copies conformes</li>
+          <li>Actes sous seing privé contresignés</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 6 -->
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">06</div>
+        <div class="service-icon-wrap">📦</div>
+        <div class="service-title">Gestion de Biens Sensibles & Actifs</div>
+        <p class="service-desc">Conservation, transport sécurisé et gestion juridique de biens précieux, documents classifiés et actifs d'exception avec des protocoles stricts.</p>
+        <ul class="service-bullets">
+          <li>Transport sécurisé de biens précieux et numéraires</li>
+          <li>Gestion d'actifs sensibles et classifiés</li>
+          <li>Stockage sous haute surveillance</li>
+          <li>Séquestres notariaux et dépôts légaux</li>
+          <li>Valorisation et inventaire d'actifs</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 7 -->
+      <div class="service-card reveal">
+        <div class="service-num">07</div>
+        <div class="service-icon-wrap">✈️</div>
+        <div class="service-title">Convoyages Diplomatiques</div>
+        <p class="service-desc">Organisation et sécurisation du transport de documents officiels, valeurs diplomatiques et biens sensibles à destination nationale et internationale.</p>
+        <ul class="service-bullets">
+          <li>Convoyage de valises diplomatiques</li>
+          <li>Transport de documents officiels certifiés</li>
+          <li>Escorte sécurisée de biens de haute valeur</li>
+          <li>Liaisons avec ambassades et consulats</li>
+          <li>Gestion des formalités douanières</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 8 -->
+      <div class="service-card reveal reveal-d1">
+        <div class="service-num">08</div>
+        <div class="service-icon-wrap">💾</div>
+        <div class="service-title">Récupération de Données & Archives</div>
+        <p class="service-desc">Reconstitution, récupération et sécurisation de données juridiques, archives notariales et informations critiques pour la protection de vos droits.</p>
+        <ul class="service-bullets">
+          <li>Récupération d'actes et archives notariales perdus</li>
+          <li>Reconstitution de titres fonciers</li>
+          <li>Numérisation et archivage sécurisé</li>
+          <li>Collecte de preuves et investigations</li>
+          <li>Certification de données numériques</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+      <!-- 9 -->
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">09</div>
+        <div class="service-icon-wrap">🎓</div>
+        <div class="service-title">Formations Juridiques Spécialisées</div>
+        <p class="service-desc">Sessions de formation et sensibilisation au droit notarial, au droit des affaires ivoirien et aux procédures juridiques pour professionnels et institutions.</p>
+        <ul class="service-bullets">
+          <li>Formations en droit immobilier ivoirien</li>
+          <li>Ateliers droit des sociétés et OHADA</li>
+          <li>Séminaires successions et patrimoine</li>
+          <li>Conseil aux institutions publiques</li>
+          <li>Accompagnement des investisseurs étrangers</li>
+        </ul>
+        <a href="#devis" class="service-link">Prendre rendez-vous</a>
+      </div>
+
+    </div>
+
+    <!-- CTA bar -->
+    <div class="services-cta reveal">
+      <div class="services-cta-text">Besoin d'un service <em>non listé ici</em> ?<br>Contactez-nous pour une consultation personnalisée.</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#devis" class="btn-gold">Demander un Devis Gratuit</a>
+        <a href="tel:+22507099796 97" class="btn-outline-white">☎ +225 07 09 97 96 97</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CHIFFRES ══════════════ -->
+<section id="chiffres">
+  <div class="container">
+    <div class="chiffres-inner">
+      <div class="chiffre-block reveal">
+        <div class="chiffre-val" data-target="15">0<sup>+</sup></div>
+        <div class="chiffre-lbl">Années d'Exercice Notarial</div>
+      </div>
+      <div class="chiffre-block reveal reveal-d1">
+        <div class="chiffre-val" data-target="3500">0<sup>+</sup></div>
+        <div class="chiffre-lbl">Actes Authentifiés</div>
+      </div>
+      <div class="chiffre-block reveal reveal-d2">
+        <div class="chiffre-val" data-target="1200">0<sup>+</sup></div>
+        <div class="chiffre-lbl">Clients Accompagnés</div>
+      </div>
+      <div class="chiffre-block reveal reveal-d3">
+        <div class="chiffre-val" data-target="100">0<sup>%</sup></div>
+        <div class="chiffre-lbl">Conformité Légale Garantie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EXPERTISE ══════════════ -->
+<section id="expertise">
+  <div class="container">
+    <div class="expertise-header reveal">
+      <div class="section-eyebrow">Domaines de Compétence</div>
+      <h2 class="section-title-dark" style="max-width:600px">Une expertise <em>pluridisciplinaire</em> à votre service</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-item reveal">
+        <span class="expertise-item-icon">🏛️</span>
+        <div class="expertise-item-title">Droit Notarial Ivoirien</div>
+        <p class="expertise-item-desc">Maîtrise complète du droit notarial applicable en Côte d'Ivoire et des procédures du Conseil Supérieur du Notariat.</p>
+      </div>
+      <div class="expertise-item reveal reveal-d1">
+        <span class="expertise-item-icon">🌍</span>
+        <div class="expertise-item-title">Droit OHADA</div>
+        <p class="expertise-item-desc">Expertise en droit des affaires harmonisé de l'espace OHADA, applicable aux entreprises actives en Afrique de l'Ouest.</p>
+      </div>
+      <div class="expertise-item reveal reveal-d2">
+        <span class="expertise-item-icon">📊</span>
+        <div class="expertise-item-title">Ingénierie Patrimoniale</div>
+        <p class="expertise-item-desc">Structuration juridique et fiscale de votre patrimoine pour une transmission optimisée et protégée de vos actifs.</p>
+      </div>
+      <div class="expertise-item reveal reveal-d3">
+        <span class="expertise-item-icon">🔐</span>
+        <div class="expertise-item-title">Sécurisation d'Actifs</div>
+        <p class="expertise-item-desc">Protocoles rigoureux de conservation, transport et gestion sécurisée d'actifs sensibles, documents classifiés et valeurs d'exception.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MÉTHODE ══════════════ -->
+<section id="methode">
+  <div class="container">
+    <div class="methode-header">
+      <div class="reveal">
+        <div class="section-eyebrow">Notre Démarche</div>
+        <h2 class="section-title-dark">Un accompagnement <em>structuré</em>,<br>étape par étape</h2>
+      </div>
+      <p class="section-body-dark reveal reveal-d2">
+        Chaque client bénéficie d'un suivi rigoureux et transparent à chaque étape de son dossier.
+        Notre processus garantit clarté, délais maîtrisés et sécurité juridique absolue.
+      </p>
+    </div>
+    <div class="methode-steps">
+      <div class="methode-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Consultation Initiale</div>
+        <p class="step-desc">Analyse de votre situation, identification de vos besoins et conseil juridique préliminaire gratuit lors d'un premier entretien confidentiel.</p>
+      </div>
+      <div class="methode-step reveal reveal-d1">
+        <div class="step-num">02</div>
+        <div class="step-title">Constitution du Dossier</div>
+        <p class="step-desc">Collecte des pièces requises, vérifications préalables et instruction complète du dossier selon les exigences légales en vigueur.</p>
+      </div>
+      <div class="methode-step reveal reveal-d2">
+        <div class="step-num">03</div>
+        <div class="step-title">Rédaction & Authentification</div>
+        <p class="step-desc">Rédaction précise de l'acte notarié, lecture aux parties, recueil des consentements éclairés et authentification par le notaire.</p>
+      </div>
+      <div class="methode-step reveal reveal-d3">
+        <div class="step-num">04</div>
+        <div class="step-title">Conservation & Suivi</div>
+        <p class="step-desc">Conservation légale de l'acte au minutier, formalités de publication et délivrance des copies authentiques à toutes les parties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MAÎTRE ══════════════ -->
+<section id="maitre">
+  <div class="container">
+    <div class="maitre-grid">
+      <div class="maitre-portrait reveal">
+        <div class="maitre-portrait-frame">
+          <div class="maitre-initials">GJ</div>
+          <div class="maitre-ribbon">
+            <div class="maitre-ribbon-name">Maître Gnagne Junior</div>
+            <div class="maitre-ribbon-title">Notaire Assermenté — Abidjan, Côte d'Ivoire</div>
+          </div>
+        </div>
+      </div>
+      <div class="maitre-text reveal reveal-d2">
+        <div class="section-eyebrow">Le Notaire</div>
+        <h2 class="section-title-dark">Maître Gnagne Junior, <em>au service de vos droits</em></h2>
+        <p class="section-body-dark">
+          Titulaire d'une formation notariale de haut niveau et inscrit au Barreau des Notaires
+          de Côte d'Ivoire, Maître Gnagne Junior exerce avec passion et rigueur depuis plus de
+          quinze ans au sein de l'étude World Global Security.
+        </p>
+        <p class="section-body-dark">
+          Son expertise couvre l'ensemble du droit notarial ivoirien — immobilier, famille,
+          sociétés, successions — ainsi que les actes à portée internationale relevant du
+          droit OHADA et des conventions diplomatiques multilatérales.
+        </p>
+        <p class="section-body-dark">
+          Reconnu pour son implication personnelle dans chaque dossier, sa disponibilité
+          et sa pédagogie, Maître Gnagne est le partenaire de confiance des particuliers,
+          entrepreneurs et institutions implantés en Côte d'Ivoire et à l'étranger.
+        </p>
+        <div class="maitre-credentials">
+          <div class="maitre-cred">
+            <span class="maitre-cred-icon">🎓</span>
+            <div>
+              <div class="maitre-cred-title">Formation</div>
+              <div class="maitre-cred-text">Diplôme Supérieur du Notariat — Spécialisation Droit des Affaires & Droit Foncier</div>
+            </div>
+          </div>
+          <div class="maitre-cred">
+            <span class="maitre-cred-icon">🏛️</span>
+            <div>
+              <div class="maitre-cred-title">Inscription</div>
+              <div class="maitre-cred-text">Conseil Supérieur du Notariat de Côte d'Ivoire — Chambre d'Abidjan</div>
+            </div>
+          </div>
+          <div class="maitre-cred">
+            <span class="maitre-cred-icon">🌍</span>
+            <div>
+              <div class="maitre-cred-title">Compétences Internationales</div>
+              <div class="maitre-cred-text">Droit OHADA, Apostilles, Actes diplomatiques, Successions transfrontalières</div>
+            </div>
+          </div>
+          <div class="maitre-cred">
+            <span class="maitre-cred-icon">🤝</span>
+            <div>
+              <div class="maitre-cred-title">Langues de Travail</div>
+              <div class="maitre-cred-text">Français (natif) — Anglais professionnel — Dioula</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TÉMOIGNAGES ══════════════ -->
+<section id="temoignages">
+  <div class="container">
+    <div class="temo-header reveal">
+      <div>
+        <div class="section-eyebrow" style="color:var(--gold)">Témoignages</div>
+        <h2 class="section-title-light">Ce que disent<br>nos <em>clients</em></h2>
+      </div>
+      <div class="slider-btns">
+        <button class="slider-btn" id="prevBtn">←</button>
+        <button class="slider-btn" id="nextBtn">→</button>
+      </div>
+    </div>
+    <div class="temo-track-wrap">
+      <div class="temo-track" id="temoTrack">
+        <div class="temo-card">
+          <p class="temo-quote">Maître Gnagne a géré la succession de mon père avec une humanité et une précision remarquables. L'ensemble du dossier, pourtant complexe, a été réglé en moins de deux mois. Je recommande cette étude sans la moindre réserve.</p>
+          <div class="temo-author">
+            <div class="temo-avatar">A</div>
+            <div>
+              <div class="temo-name">Aïssatou Coulibaly</div>
+              <div class="temo-role">Cadre supérieure — Abidjan Plateau</div>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="temo-card">
+          <p class="temo-quote">Pour la création de notre société et la rédaction de nos statuts, l'étude World Global Security nous a accompagnés avec un professionnalisme exemplaire. Les délais annoncés ont été respectés à la lettre. Une équipe de grande qualité.</p>
+          <div class="temo-author">
+            <div class="temo-avatar">K</div>
+            <div>
+              <div class="temo-name">Konan Ébagnin</div>
+              <div class="temo-role">Directeur Général, PME Abidjan</div>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="temo-card">
+          <p class="temo-quote">J'ai fait appel à Maître Gnagne pour l'achat de mon terrain au Plateau. Il m'a expliqué chaque étape avec clarté, sécurisé la transaction et obtenu mes titres en temps record. Une étude sérieuse et très compétente.</p>
+          <div class="temo-author">
+            <div class="temo-avatar">M</div>
+            <div>
+              <div class="temo-name">Marie-Claire Dosso</div>
+              <div class="temo-role">Particulier — Cocody, Abidjan</div>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="temo-card">
+          <p class="temo-quote">En tant qu'investisseur étranger, j'avais besoin d'un notaire fiable pour mes acquisitions immobilières en Côte d'Ivoire. World Global Security a su naviguer les complexités locales avec une expertise et une transparence que j'ai vivement appréciées.</p>
+          <div class="temo-author">
+            <div class="temo-avatar">T</div>
+            <div>
+              <div class="temo-name">Thierry Marchetti</div>
+              <div class="temo-role">Investisseur — Paris / Abidjan</div>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ POURQUOI NOUS ══════════════ -->
+<section id="pourquoi">
+  <div class="container">
+    <div class="pourquoi-grid">
+      <div class="reveal">
+        <div class="section-eyebrow">Nos Atouts</div>
+        <h2 class="section-title-dark" style="margin-bottom:40px">Pourquoi choisir<br><em>notre étude</em> ?</h2>
+        <div class="pourquoi-reasons">
+          <div class="pourquoi-reason">
+            <div class="pourquoi-reason-num">01</div>
+            <div>
+              <div class="pourquoi-reason-title">Expertise Globale et Certifiée</div>
+              <div class="pourquoi-reason-desc">Notre équipe est composée de juristes hautement qualifiés, inscrits au Conseil Supérieur du Notariat de Côte d'Ivoire, avec une expertise reconnue en droit OHADA et en droit international privé.</div>
+            </div>
+          </div>
+          <div class="pourquoi-reason">
+            <div class="pourquoi-reason-num">02</div>
+            <div>
+              <div class="pourquoi-reason-title">Solutions Intégrées et Sur Mesure</div>
+              <div class="pourquoi-reason-desc">Contrairement à des études généralistes, nous proposons une approche à 360° couvrant notariat, sécurisation d'actifs, convoyages et formations — un guichet unique pour vos besoins juridiques et patrimoniaux.</div>
+            </div>
+          </div>
+          <div class="pourquoi-reason">
+            <div class="pourquoi-reason-num">03</div>
+            <div>
+              <div class="pourquoi-reason-title">Technologies et Protocoles de Pointe</div>
+              <div class="pourquoi-reason-desc">Nous investissons dans les meilleures solutions de dématérialisation, d'archivage sécurisé et de suivi en temps réel pour vous garantir réactivité et traçabilité à chaque étape de votre dossier.</div>
+            </div>
+          </div>
+          <div class="pourquoi-reason">
+            <div class="pourquoi-reason-num">04</div>
+            <div>
+              <div class="pourquoi-reason-title">Partenariat de Confiance sur le Long Terme</div>
+              <div class="pourquoi-reason-desc">Nous nous engageons à une communication claire, honnête et proactive. Vous disposez d'une visibilité totale sur votre dossier et bénéficiez d'un interlocuteur dédié à tout moment.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pourquoi-visual reveal reveal-d2">
+        <div class="pourquoi-box">
+          <div class="pourquoi-box-eyebrow">Notre Engagement</div>
+          <div class="pourquoi-box-title">Nous sommes là pour assurer la <em>gestion et la sécurité</em> de vos biens sensibles</div>
+          <div class="pourquoi-box-desc">
+            Chaque acte notarié engage notre responsabilité professionnelle. C'est pourquoi
+            nous ne faisons aucun compromis sur la qualité de la rédaction, la vérification
+            des droits et la sécurisation de vos transactions.
+          </div>
+          <a href="#devis" class="btn-gold">Consultation Gratuite →</a>
+          <div class="pourquoi-certif">
+            <span>Conseil Supérieur du Notariat CI</span>
+            <span>Droit OHADA</span>
+            <span>ISO Archivage</span>
+            <span>Réponse 24h</span>
+            <span>Assistance 24/7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEVIS / CONTACT ══════════════ -->
+<section id="devis">
+  <div class="container">
+    <div class="devis-grid">
+
+      <!-- Left info -->
+      <div class="reveal">
+        <div class="section-eyebrow">Prendre Contact</div>
+        <h2 class="section-title-dark">Demandez un <em>devis gratuit</em></h2>
+        <p class="section-body-dark" style="margin-bottom:36px">
+          Répondons dans les 24 heures ouvrables. Assistance téléphonique disponible
+          du lundi au vendredi de 08h00 à 18h00. Pour les urgences, une ligne est
+          disponible en dehors des heures d'ouverture.
+        </p>
+
+        <div class="devis-contact-items">
+          <a href="tel:+22507099796 97" class="devis-contact-item">
+            <div class="devis-contact-icon">☎</div>
+            <div>
+              <div class="devis-contact-label">Téléphone Principal</div>
+              <div class="devis-contact-val">+225 07 09 97 96 97</div>
+            </div>
+          </a>
+          <a href="mailto:worldglobalsecurity@gmail.com" class="devis-contact-item">
+            <div class="devis-contact-icon">✉</div>
+            <div>
+              <div class="devis-contact-label">Adresse Email</div>
+              <div class="devis-contact-val">worldglobalsecurity@gmail.com</div>
+            </div>
+          </a>
+          <div class="devis-contact-item">
+            <div class="devis-contact-icon">📍</div>
+            <div>
+              <div class="devis-contact-label">Adresse du Cabinet</div>
+              <div class="devis-contact-val">Plateau, Abidjan — Côte d'Ivoire</div>
+            </div>
+          </div>
+          <div class="devis-contact-item">
+            <div class="devis-contact-icon">⚖️</div>
+            <div>
+              <div class="devis-contact-label">Notaire Responsable</div>
+              <div class="devis-contact-val">Maître Gnagne Junior</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="devis-hours">
+          <div class="devis-hours-title">Horaires d'Ouverture</div>
+          <div class="devis-hours-row"><span>Lundi – Vendredi</span><span>08h00 – 18h00</span></div>
+          <div class="devis-hours-row"><span>Samedi</span><span>09h00 – 13h00</span></div>
+          <div class="devis-hours-row"><span>Dimanche</span><span>Fermé</span></div>
+          <div class="devis-hours-row"><span>Urgences</span><span>24h/24 — 7j/7</span></div>
+        </div>
+      </div>
+
+      <!-- Right form -->
+      <div class="devis-form reveal reveal-d2">
+        <div class="devis-form-title">Votre demande de <em>devis gratuit</em></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Prénom *</label>
+            <input type="text" class="form-input" placeholder="Jean" id="f-prenom">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nom *</label>
+            <input type="text" class="form-input" placeholder="Kouamé" id="f-nom">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Téléphone *</label>
+            <input type="tel" class="form-input" placeholder="+225 07 XX XX XX XX" id="f-tel">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="votre@email.com" id="f-email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Service souhaité *</label>
+          <select class="form-select" id="f-service">
+            <option value="">Sélectionnez un service...</option>
+            <option>Transactions Immobilières</option>
+            <option>Successions & Héritages</option>
+            <option>Droit de la Famille (Mariage, Donation…)</option>
+            <option>Droit des Sociétés & Création d'Entreprise</option>
+            <option>Authentification d'Actes & Légalisations</option>
+            <option>Gestion de Biens Sensibles & Actifs</option>
+            <option>Convoyages Diplomatiques</option>
+            <option>Récupération de Données & Archives</option>
+            <option>Formations Juridiques Spécialisées</option>
+            <option>Conseil Juridique Général</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Décrivez votre situation *</label>
+          <textarea class="form-textarea" placeholder="Décrivez brièvement votre dossier ou la nature de votre demande. Toutes les informations sont traitées avec la plus stricte confidentialité." id="f-message"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Disponibilité préférée</label>
+          <select class="form-select" id="f-dispo">
+            <option value="">Quand souhaitez-vous être contacté ?</option>
+            <option>Le matin (08h–12h)</option>
+            <option>L'après-midi (12h–18h)</option>
+            <option>Dès que possible</option>
+            <option>Je préfère être contacté par email</option>
+          </select>
+        </div>
+
+        <button class="btn-navy" style="width:100%;justify-content:center;margin-top:8px" onclick="submitForm()">
+          <span>Envoyer ma Demande de Devis</span> →
+        </button>
+
+        <div class="form-notice">
+          <span>🔒</span>
+          Vos données sont traitées avec la plus stricte confidentialité et ne sont jamais transmises à des tiers.
+          Conformément au secret professionnel notarial.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LOCALISATION ══════════════ -->
+<section id="localisation">
+  <div class="container">
+    <div class="localisation-grid">
+      <div class="map-placeholder reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1!2d-4.0167!3d5.3167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959b5d%3A0xbe82b8b7e16e2c0!2sPlateau%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1"
+          allowfullscreen="" loading="lazy" title="Localisation de l'étude notariale à Abidjan Plateau">
+        </iframe>
+        <div class="map-overlay-badge">📍 Abidjan Plateau, Côte d'Ivoire</div>
+      </div>
+
+      <div class="address-block reveal reveal-d2">
+        <div class="section-eyebrow">Nous Trouver</div>
+        <h3 class="section-title-dark" style="font-size:32px;margin-bottom:32px">Notre Cabinet à <em>Abidjan</em></h3>
+        <div class="address-lines">
+          <div class="address-line">
+            <span class="address-line-icon">📍</span>
+            <div>
+              <div class="address-line-label">Adresse</div>
+              <div class="address-line-val">Plateau, Abidjan<br>Côte d'Ivoire</div>
+            </div>
+          </div>
+          <div class="address-line">
+            <span class="address-line-icon">☎</span>
+            <div>
+              <div class="address-line-label">Téléphone</div>
+              <div class="address-line-val">
+                <a href="tel:+22507099796 97">+225 07 09 97 96 97</a>
+              </div>
+            </div>
+          </div>
+          <div class="address-line">
+            <span class="address-line-icon">✉</span>
+            <div>
+              <div class="address-line-label">Email</div>
+              <div class="address-line-val">
+                <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="address-line">
+            <span class="address-line-icon">🕐</span>
+            <div>
+              <div class="address-line-label">Horaires</div>
+              <div class="address-line-val">Lun–Ven : 08h–18h &nbsp;|&nbsp; Sam : 09h–13h</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="tel:+22507099796 97" class="btn-navy"><span>☎ Appeler Maintenant</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-main">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <svg viewBox="0 0 560.11066 518.25543" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(276.19119,512.9389)">
+          <g transform="matrix(2.0012952,0,0,1.9534475,479.54445,-526.3847)">
+            <path style="fill:#c8a96e;stroke:none" d="m -230.22281,267.7225 c -0.30154,-0.36188 -5.9851,-11.6316 -12.63012,-25.04384 -6.64503,-13.41224 -14.37395,-29.00531 -17.17537,-34.65127 -2.80143,-5.64595 -5.73386,-10.44762 -6.51652,-10.67037 -0.78265,-0.22274 -2.02558,0.0579 -2.76207,0.62353 -0.73649,0.56569 -4.78818,8.95523 -9.00376,18.64344 -4.21558,9.68821 -7.96561,17.60592 -8.33339,17.59491 -0.36779,-0.011 -7.22478,-3.5989 -15.23777,-7.97308 -8.01299,-4.37418 -22.29321,-12.125 -31.73383,-17.22406 l -17.16475,-9.27101 -0.0162,-19.66665 -0.0162,-19.66664 11.26565,-8.33182 c 6.1961,-4.58249 11.5961,-8.33181 12,-8.33181 0.40389,0 0.73435,10.50557 0.73435,23.34571 v 23.3457 l 5.02454,2.94572 c 2.7635,1.62014 8.67281,4.85258 13.13179,7.18318 8.96625,4.68645 10.24067,4.71165 12.4398,0.24594 0.69139,-1.40398 6.83275,-14.14217 13.64746,-28.30707 l 12.39039,-25.75437 4.20034,3.17426 c 3.44079,2.60027 4.92141,4.70921 8.1879,11.66245 2.19316,4.66848 11.57696,23.67407 20.85289,42.23464 15.53335,31.0813 17.05666,33.76385 19.28807,33.96636 1.77341,0.16094 4.46662,-1.07356 10.04861,-4.60606 8.91738,-5.64325 11.76818,-8.24485 15.29433,-13.95737 5.75088,-9.31668 5.363,-19.66006 -1.09616,-29.23039 -4.60751,-6.8268 -10.15126,-11.37435 -28.20362,-23.13545 -17.86928,-11.64182 -32.34777,-22.62948 -38.07392,-28.89412 -5.67783,-6.21176 -12.2871,-16.54299 -12.47849,-19.50565 -0.14998,-2.32172 0.0769,-2.45563 8.84607,-5.22196 4.95,-1.56152 9.592,-2.762 10.31556,-2.66773 0.72355,0.0943 2.47675,2.34082 3.89599,4.99232 6.10557,11.40679 17.18815,21.26383 41.52316,36.93147 18.46585,11.88889 22.42239,14.76212 28.22151,20.49446 16.40623,16.2173 19.23008,38.10352 7.20192,55.81837 -6.46959,9.52831 -9.58974,11.80457 -43.15814,31.48559 -13.91592,8.15885 -14.18499,8.2928 -14.91007,7.42267 z m 78.42194,-44.73688 c 0.007,-0.13351 0.69248,-2.07842 1.52434,-4.322 0.83187,-2.24359 1.79545,-7.51495 2.1413,-11.71415 l 0.62882,-7.6349 7.59683,-4.23825 7.59684,-4.23825 0.25841,-41.8554 c 0.1727,-27.97283 -0.0831,-42.10874 -0.77135,-42.61917 -0.62859,-0.4662 -5.93577,-0.68314 -13.62283,-0.55682 -6.92619,0.11382 -15.01658,-0.0176 -17.97865,-0.29212 l -5.38558,-0.49907 v -7.982211 c 0,-6.18447 -0.33726,-8.18981 -1.49746,-8.90397 -1.17933,-0.72592 -3.88802,-0.74166 -12.75,-0.074 -65.16749,4.90938 -119.2923,22.952001 -162.17659,54.061871 -7.89935,5.73049 -9.25258,6.49155 -6.63282,3.73036 5.33627,-5.62439 19.77187,-16.69553 30.53804,-23.42065 27.36228,-17.09194 60.01423,-29.342471 94.01883,-35.274481 18.9769,-3.31047 30.77902,-4.31685 55.64641,-4.74507 25.12685,-0.4327 36.31649,0.11905 59.85359,2.9513 11.04541,1.32911 12.77272,1.69482 9.5,2.01139 l -4,0.38691 -0.25631,55.765681 -0.25631,55.76567 -4.24369,2.55074 c -6.89116,4.14205 -39.75563,21.63364 -39.73182,21.14663 z m -199.23688,-147.114511 -0.27499,-54.45518 -6.97318,-5.2115 -6.97318,-5.21151 h 18.66191 18.6619 l 0.63961,3.16339 c 0.35178,1.73987 0.49185,24.63863 0.31127,50.88615 l -0.32833,47.722771 -5.62951,3.81283 c -3.09623,2.09705 -8.37248,6.04829 -11.725,8.78053 l -6.0955,4.96771 z m 73.79755,7.62114 c 3.19073,-16.87019 12.94824,-31.54326 29.93459,-45.01482 l 7.49287,-5.94246 v -10.77102 -10.77103 h 11.94521 11.94521 l 0.30479,3.52299 c 0.29388,3.39688 0.41217,3.51924 3.30479,3.41844 1.65,-0.0575 6.76397,-1.14716 11.36438,-2.42147 14.32465,-3.9679 21.56341,-4.51996 59.26661,-4.51996 h 33.86901 v 8.46375 8.46376 l -34.75,0.32512 c -39.47484,0.36933 -44.27796,0.89511 -60.14348,6.58378 -13.81844,4.95467 -13.10652,3.7422 -13.10652,22.32171 v 15.81663 l -10.61657,1.33221 c -5.83912,0.73271 -11.23912,1.50939 -12,1.72594 -1.1078,0.31529 -1.38343,-0.80424 -1.38343,-5.61906 0,-5.90256 -0.0454,-6.0128 -2.47432,-6.0128 -2.9044,0 -4.23188,1.64507 -7.56502,9.3749 -2.18741,5.07277 -2.45332,5.33339 -6.31768,6.1921 -2.21879,0.49304 -7.83408,2.19852 -12.47842,3.78993 -4.64434,1.59143 -8.61164,2.8935 -8.81622,2.8935 -0.20459,0 -0.1037,-1.41847 0.2242,-3.15214 z"/>
+          </g>
+        </g>
+      </svg>
+      <div class="footer-brand-name">World Global Security</div>
+      <div class="footer-brand-sub">Étude Notariale — Maître Gnagne Junior</div>
+      <div class="footer-brand-desc">
+        Étude notariale de référence à Abidjan, Côte d'Ivoire. Accompagnement juridique
+        et notarial d'excellence pour particuliers, entreprises et institutions depuis plus
+        de 15 ans.
+      </div>
+      <div class="footer-brand-badges">
+        <span class="footer-badge">Conseil Sup. Notariat CI</span>
+        <span class="footer-badge">Droit OHADA</span>
+        <span class="footer-badge">Membre UINL</span>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h4>Nos Services</h4>
+      <ul>
+        <li><a href="#services">Transactions Immobilières</a></li>
+        <li><a href="#services">Successions & Héritages</a></li>
+        <li><a href="#services">Droit de la Famille</a></li>
+        <li><a href="#services">Droit des Sociétés</a></li>
+        <li><a href="#services">Authentification d'Actes</a></li>
+        <li><a href="#services">Légalisations & Apostilles</a></li>
+        <li><a href="#services">Gestion de Biens Sensibles</a></li>
+        <li><a href="#services">Convoyages Diplomatiques</a></li>
+        <li><a href="#services">Récupération de Données</a></li>
+        <li><a href="#services">Formations Juridiques</a></li>
+      </ul>
+    </div>
+
+    <!-- Étude -->
+    <div class="footer-col">
+      <h4>L'Étude</h4>
+      <ul>
+        <li><a href="#apropos">À Propos</a></li>
+        <li><a href="#maitre">Maître Gnagne Junior</a></li>
+        <li><a href="#methode">Notre Approche</a></li>
+        <li><a href="#pourquoi">Pourquoi Nous Choisir</a></li>
+        <li><a href="#temoignages">Témoignages Clients</a></li>
+        <li><a href="#devis">Demander un Devis</a></li>
+        <li><a href="#localisation">Nous Trouver</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+22507099796 97">+225 07 09 97 96 97</a></li>
+        <li><a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a></li>
+        <li><a href="#localisation">Plateau, Abidjan — CI</a></li>
+        <li><a href="#devis">Prendre Rendez-vous</a></li>
+        <li style="margin-top:16px">
+          <span style="font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.1em">
+            Lun–Ven : 08h–18h<br>Sam : 09h–13h<br>Urgences : 24h/7j
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 World Global Security — Étude Notariale. Maître Gnagne Junior. Tous droits réservés.</div>
+    <div class="footer-legal">
+      <a href="#">Confidentialité</a>
+      <a href="#">Mentions Légales</a>
+      <a href="#">Secret Professionnel</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script>
+/* ── CURSOR ── */
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = window.innerWidth/2, my = window.innerHeight/2;
+let rx = mx, ry = my;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px';
+  cursor.style.top  = my + 'px';
+});
+(function animRing() {
+  rx += (mx - rx) * 0.13;
+  ry += (my - ry) * 0.13;
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a,button,.service-card').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2.5)'; });
+  el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; });
+});
+
+/* ── BACK TO TOP ── */
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('show', window.scrollY > 400);
+});
+
+/* ── MOBILE NAV ── */
+const mobileNav = document.getElementById('mobileNav');
+function toggleMobile() { mobileNav.classList.toggle('open'); }
+function closeMobile()  { mobileNav.classList.remove('open'); }
+
+/* ── REVEAL ON SCROLL ── */
+const reveals = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+reveals.forEach(el => revObs.observe(el));
+
+/* ── COUNTER ANIMATION ── */
+function animateCounter(el, target, suffix) {
+  const duration = 2200;
+  let start = null;
+  const step = ts => {
+    if (!start) start = ts;
+    const prog = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - prog, 4);
+    const val = Math.round(eased * target);
+    el.innerHTML = (val >= 1000 ? val.toLocaleString('fr') : val) + '<sup>' + suffix + '</sup>';
+    if (prog < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.chiffre-val[data-target]').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const sup = el.querySelector('sup')?.textContent || '';
+        animateCounter(el, target, sup);
+        delete el.dataset.target;
+      });
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+const chiffresSection = document.getElementById('chiffres');
+if (chiffresSection) counterObs.observe(chiffresSection);
+
+/* ── TESTIMONIAL SLIDER ── */
+const track = document.getElementById('temoTrack');
+const cards = track ? track.querySelectorAll('.temo-card') : [];
+let slide = 0;
+const visCount = window.innerWidth <= 768 ? 1 : 2;
+const maxSlide = Math.max(0, cards.length - visCount);
+
+function goSlide(idx) {
+  slide = Math.max(0, Math.min(idx, maxSlide));
+  const w = cards[0] ? cards[0].offsetWidth + 28 : 0;
+  track.style.transform = `translateX(-${slide * w}px)`;
+}
+document.getElementById('prevBtn')?.addEventListener('click', () => goSlide(slide - 1));
+document.getElementById('nextBtn')?.addEventListener('click', () => goSlide(slide + 1));
+setInterval(() => goSlide(slide >= maxSlide ? 0 : slide + 1), 6000);
+
+/* ── FORM SUBMIT ── */
+function submitForm() {
+  const prenom  = document.getElementById('f-prenom')?.value.trim();
+  const tel     = document.getElementById('f-tel')?.value.trim();
+  const service = document.getElementById('f-service')?.value;
+  const message = document.getElementById('f-message')?.value.trim();
+  if (!prenom || !tel || !service || !message) {
+    alert('Veuillez remplir tous les champs obligatoires (*).');
+    return;
+  }
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 5000);
+  document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(el => el.value = '');
+}
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
