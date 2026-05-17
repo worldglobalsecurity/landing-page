@@ -229,7 +229,7 @@ function renderFooter() {
           <div class="sub">Étude Notariale</div>
         </div>
       </div>
-      <p>Étude notariale de référence à Abidjan, Côte d'Ivoire. Sous la direction de Maître John Anderson, notaire assermenté.</p>
+      <p>Étude notariale de référence à Brisbane, Australie. Sous la direction de Maître John Anderson, notaire assermenté.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
