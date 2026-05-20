@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="World Global Security — Étude Notariale, Abidjan Côte d'Ivoire. Gestion et sécurité de vos biens.">
-<meta name="keywords" content="notaire abidjan, étude notariale côte d'ivoire, world global security, actes notariés">
+<meta name="description" content="World Global Security — Étude Notariale, Brisbane, Australie. Gestion et sécurité de vos biens.">
+<meta name="keywords" content="notaire brisbane, étude notariale australie, world global security, actes notariés">
 <title>Accueil | World Global Security</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2300001e'/><text y='.9em' font-size='60' x='50%' text-anchor='middle' dy='.1em' fill='%23c8a96e'>W</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -533,7 +533,7 @@ footer {
     <div class="topbar-left">
       <span>📍 Brisbane, Australie</span>
       <span>☎ <a href="tel:+61 485 976 4090">+61 485 976 4090</a></span>
-      <span>✉ <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a></span>
+      <span>✉ <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a></span>
     </div>
     <div class="topbar-right">Lun–Ven : 08h–18h &nbsp;|&nbsp; Urgences 24/7</div>
   </div>
@@ -734,7 +734,7 @@ footer {
     <div class="footer-col"><h4>Contact</h4>
       <address>Brisbane, Australie<br><br>
       Tél : <a href="tel:+61 485 976 4090">+61 485 976 4090</a><br>
-      E-mail : <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a><br><br>
+      E-mail : <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a><br><br>
       Lun–Ven : 08h–18h<br>Sam : 09h–13h</address>
     </div>
   </div>
@@ -750,7 +750,7 @@ function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
 window.addEventListener('scroll',()=>{const b=document.getElementById('btt');b&&b.classList.toggle('show',window.scrollY>300)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});
-function submitDevis(e){e.preventDefault();const t=document.getElementById('toast');t.textContent='✓ Votre demande a été envoyée. Nous vous répondrons sous 24h.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500);e.target.reset()}
-function submitContact(e){e.preventDefault();const t=document.getElementById('toast');t.textContent='✓ Message envoyé. Nous vous contacterons très bientôt.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500);e.target.reset()}
+function submitDevis(e){e.preventDefault();const form=e.target;const fields=form.querySelectorAll('select,input,textarea');const labels=['Service demandé','Nom complet','Adresse email','Téléphone','Description du besoin'];const data={_subject:'Nouvelle demande de devis — World Global Security'};fields.forEach((el,i)=>{if(el.value)data[labels[i]||('Champ '+(i+1))]=el.value});fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});const t=document.getElementById('toast');if(t){t.textContent='✓ Votre demande a été envoyée. Nous vous répondrons sous 24h.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500)}form.reset()}
+function submitContact(e){e.preventDefault();const form=e.target;const fields=form.querySelectorAll('input,textarea');const labels=['Nom complet','Adresse email','Téléphone','Sujet','Message'];const data={_subject:'Nouveau message de contact — World Global Security'};fields.forEach((el,i)=>{if(el.value)data[labels[i]||('Champ '+(i+1))]=el.value});fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});const t=document.getElementById('toast');if(t){t.textContent='✓ Message envoyé. Nous vous contacterons très bientôt.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500)}form.reset()}
 </script>
 </body></html>

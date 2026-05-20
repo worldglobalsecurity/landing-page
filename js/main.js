@@ -34,25 +34,45 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // ── DEVIS FORM SUBMIT ──
 function submitDevis(e) {
   e.preventDefault();
+  const form = e.target;
+  const fields = form.querySelectorAll('select, input, textarea');
+  const labels = ['Service demandé', 'Nom complet', 'Adresse email', 'Téléphone', 'Description du besoin'];
+  const data = { _subject: 'Nouvelle demande de devis — World Global Security' };
+  fields.forEach((el, i) => { if (el.value) data[labels[i] || ('Champ ' + (i + 1))] = el.value; });
+  fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  }).catch(() => {});
   const toast = document.getElementById('toast');
   if (toast) {
     toast.textContent = '✓ Votre demande a été envoyée. Nous vous répondrons sous 24h.';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 4500);
   }
-  e.target.reset();
+  form.reset();
 }
 
 // ── CONTACT FORM SUBMIT ──
 function submitContact(e) {
   e.preventDefault();
+  const form = e.target;
+  const fields = form.querySelectorAll('input, textarea');
+  const labels = ['Nom complet', 'Adresse email', 'Téléphone', 'Sujet', 'Message'];
+  const data = { _subject: 'Nouveau message de contact — World Global Security' };
+  fields.forEach((el, i) => { if (el.value) data[labels[i] || ('Champ ' + (i + 1))] = el.value; });
+  fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  }).catch(() => {});
   const toast = document.getElementById('toast');
   if (toast) {
     toast.textContent = '✓ Message envoyé. Nous vous contacterons très bientôt.';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 4500);
   }
-  e.target.reset();
+  form.reset();
 }
 
 // ── MARK ACTIVE NAV ──

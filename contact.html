@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Contactez World Global Security — Étude Notariale à Brisbane, Australie.">
-<meta name="keywords" content="notaire abidjan, étude notariale côte d'ivoire, world global security, actes notariés">
+<meta name="keywords" content="notaire brisbane, étude notariale australie, world global security, actes notariés">
 <title>Nous Contacter | World Global Security</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2300001e'/><text y='.9em' font-size='60' x='50%' text-anchor='middle' dy='.1em' fill='%23c8a96e'>W</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -533,7 +533,7 @@ footer {
     <div class="topbar-left">
       <span>📍 Brisbane, Australie</span>
       <span>☎ <a href="tel:+61 485 976 4090">+61 485 976 4090</a></span>
-      <span>✉ <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a></span>
+      <span>✉ <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a></span>
     </div>
     <div class="topbar-right">Lun–Ven : 08h–18h &nbsp;|&nbsp; Urgences 24/7</div>
   </div>
@@ -578,7 +578,7 @@ footer {
   <div class="wrap">
     <div class="contact-grid">
       <div class="map-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127609.19!2d-4.0828!3d5.3484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb2e0dc7ebb9%3A0xe1aab7e3b4c9b9e3!2sPlateau%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire!5e0!3m2!1sfr!2sci!4v1" allowfullscreen="" loading="lazy" title="Localisation World Global Security Abidjan"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226437.9!2d152.9!3d-27.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%2C%20Queensland%2C%20Australie!5e0!3m2!1sfr!2sau!4v1" allowfullscreen="" loading="lazy" title="Localisation World Global Security Brisbane, Australie"></iframe>
       </div>
       <div class="contact-form-wrap">
         <h3>Si vous avez des questions, veuillez nous contacter.</h3>
@@ -593,7 +593,7 @@ footer {
         <div style="margin-top:28px;padding-top:24px;border-top:1px solid #eee">
           <p style="font-size:13px;color:#6b7c8d;margin-bottom:8px">📍 Brisbane, Australie</p>
           <p style="font-size:13px;color:#6b7c8d;margin-bottom:8px">☎ <a href="tel:+61 485 976 4090" style="color:#a8843e">+61 485 976 4090</a></p>
-          <p style="font-size:13px;color:#6b7c8d">✉ <a href="mailto:info@worldglobalsecurity.com" style="color:#a8843e">info@worldglobalsecurity.com</a></p>
+          <p style="font-size:13px;color:#6b7c8d">✉ <a href="mailto:worldglobalsecurity@gmail.com" style="color:#a8843e">worldglobalsecurity@gmail.com</a></p>
         </div>
       </div>
     </div>
@@ -654,7 +654,7 @@ footer {
     <div class="footer-col"><h4>Contact</h4>
       <address>Brisbane, Australie<br><br>
       Tél : <a href="tel:+61 485 976 4090">+61 485 976 4090</a><br>
-      E-mail : <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a><br><br>
+      E-mail : <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a><br><br>
       Lun–Ven : 08h–18h<br>Sam : 09h–13h</address>
     </div>
   </div>
@@ -670,7 +670,7 @@ function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
 window.addEventListener('scroll',()=>{const b=document.getElementById('btt');b&&b.classList.toggle('show',window.scrollY>300)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});
-function submitDevis(e){e.preventDefault();const t=document.getElementById('toast');t.textContent='✓ Votre demande a été envoyée. Nous vous répondrons sous 24h.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500);e.target.reset()}
-function submitContact(e){e.preventDefault();const t=document.getElementById('toast');t.textContent='✓ Message envoyé. Nous vous contacterons très bientôt.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500);e.target.reset()}
+function submitDevis(e){e.preventDefault();const form=e.target;const fields=form.querySelectorAll('select,input,textarea');const labels=['Service demandé','Nom complet','Adresse email','Téléphone','Description du besoin'];const data={_subject:'Nouvelle demande de devis — World Global Security'};fields.forEach((el,i)=>{if(el.value)data[labels[i]||('Champ '+(i+1))]=el.value});fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});const t=document.getElementById('toast');if(t){t.textContent='✓ Votre demande a été envoyée. Nous vous répondrons sous 24h.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500)}form.reset()}
+function submitContact(e){e.preventDefault();const form=e.target;const fields=form.querySelectorAll('input,textarea');const labels=['Nom complet','Adresse email','Téléphone','Sujet','Message'];const data={_subject:'Nouveau message de contact — World Global Security'};fields.forEach((el,i)=>{if(el.value)data[labels[i]||('Champ '+(i+1))]=el.value});fetch('https://formsubmit.co/ajax/worldglobalsecurity@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});const t=document.getElementById('toast');if(t){t.textContent='✓ Message envoyé. Nous vous contacterons très bientôt.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500)}form.reset()}
 </script>
 </body></html>

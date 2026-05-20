@@ -14,7 +14,7 @@ function renderTopbar() {
     <div class="topbar-left">
       <span>📍 Brisbane, Australie</span>
       <span>☎ <a href="tel:+61 485 976 4090">+61 485 976 4090</a></span>
-      <span>✉ <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a></span>
+      <span>✉ <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a></span>
     </div>
     <div class="topbar-right">Lun–Ven : 08h–18h &nbsp;|&nbsp; Urgences 24/7</div>
   </div>
@@ -255,10 +255,9 @@ function renderFooter() {
     <div class="footer-col">
       <h4>Contact</h4>
       <address>
-        Plateau, Abidjan<br>
-        Côte d'Ivoire<br><br>
+        Brisbane, Australie<br><br>
         Tél : <a href="tel:+61 485 976 4090">+61 485 976 4090</a><br>
-        E-mail : <a href="mailto:info@worldglobalsecurity.com">info@worldglobalsecurity.com</a><br><br>
+        E-mail : <a href="mailto:worldglobalsecurity@gmail.com">worldglobalsecurity@gmail.com</a><br><br>
         Lun–Ven : 08h–18h<br>
         Sam : 09h–13h
       </address>
